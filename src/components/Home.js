@@ -1,8 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import packagesInfo from './packages/_package.json';
+// import { useEffect } from "react";
 
-class Home extends Component {
-	render() {
+function Home () {
+	const data = packagesInfo.splice(0, 3);
+	 console.log(data);
+
+	const packages = data.map(packageData => {
+		return (
+			<div className="col-lg-4 mb-lg-0 mb-0" key={packageData.slug}>
+				<Link to={`/package-list/${packageData.slug}`}>
+					<div className="d-flex justify-content-center container mt-5">
+						<div className="card p-3 bg-white morphism">
+							<div className="about-product text-center mt-2"><img src={packageData.image} alt="" width="300" height="250" />
+								<div>
+									<h4 className="pt-1">{packageData.title}</h4>
+								</div>
+							</div>
+							<div className="stats mt-2">
+								<div className="d-flex justify-content-between p-price text-dark"><span>Package Duration</span><span>{packageData.packageDuration}</span></div>
+								{/* <div className="d-flex justify-content-between p-price"><span>Pattaya, Thailand</span><span>3 Nights</span></div>
+                  <div className="d-flex justify-content-between p-price"><span>Bangkok, Thailand</span><span>2 Nights</span></div> */}
+							</div>
+							<div className="d-flex justify-content-between total font-weight-bold mt-1 text-dark"><span>Starting at only</span><span>{packageData.total}</span>
+							</div>
+						</div>
+					</div>
+				</Link>
+			</div>
+		);
+	});
+
+	
 		return (
 			<div>
 				<div className="banner_w3lspvt" id="home">
@@ -22,43 +52,13 @@ class Home extends Component {
 								</div>
 							</li>
 							<li>
-								{/* <div className="slider-info bg2">
-									<div className="bs-slider-overlay1">
-										<div className="banner-text">
-											<div className="container">
-												<h4 className="movetxt agile-title text-capitalize">We Help to grow your hair as well beard </h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
-												<Link to='/contact' className="btn">Get appointment</Link>
-											</div>
-										</div>
-									</div>
-								</div> */}
+								
 							</li>
 							<li>
-								{/* <div className="slider-info bg3">
-									<div className="bs-slider-overlay1">
-										<div className="banner-text">
-											<div className="container">
-												<h2 className="movetxt agile-title text-capitalize">We Design and Create Hair Style Latest</h2>
-												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
-												<Link to='/contact' className="btn">Get appointment</Link>
-											</div>
-										</div>
-									</div>
-								</div> */}
+							
 							</li>
 							<li>
-								{/* <div className="slider-info bg4">
-									<div className="bs-slider-overlay1">
-										<div className="banner-text">
-											<div className="container">
-												<h4 className="movetxt agile-title text-capitalize">We design latest trending haircuts </h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
-												<Link to='/contact' className="btn">Get appointment</Link>
-											</div>
-										</div>
-									</div>
-								</div> */}
+							
 							</li>
 						</ul>
 						<div className="navigation">
@@ -219,78 +219,10 @@ class Home extends Component {
 							We organize customised holiday packages , both domestic and international
 							</h3>
 						<div className="row pricing-grids">
-							<div className="col-lg-4  mb-lg-0 mb-0">
-								<div className="">
-
-									<div className="d-flex justify-content-center container mt-5">
-										<div className="card p-3 bg-white morphism">
-											{/* <i className="fa fa-apple"></i> */}
-											<div className="about-product text-center mt-2"><img src="https://i.imgur.com/hZdZB0N.jpg" width="300" height="250" alt="" />
-												<div>
-													<h4>Bangkok and Pataya</h4>
-													{/* <h6 className="mt-0 text-black-50">Apple pro display XDR</h6> */}
-												</div>
-											</div>
-
-											<div className="stats mt-2">
-												<div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>5 Nights</span></div>
-												<div className="d-flex justify-content-between p-price"><span>Pattaya, Thailand</span><span>3 Nights</span></div>
-												<div className="d-flex justify-content-between p-price"><span>Bangkok, Thailand</span><span>2 Nights</span></div>
-											</div>
-											<div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-4  mb-lg-0 mb-0">
-								<div className="">
-
-									<div className="d-flex justify-content-center container mt-5">
-										<div className="card p-3 bg-white morphism">
-											{/* <i className="fa fa-apple"></i> */}
-											<div className="about-product text-center mt-2"><img src="https://i.imgur.com/SKZlmM9.png" width="300" height="250" alt="" />
-												<div>
-													<h4>Dubai</h4>
-													{/* <h6 className="mt-0 text-black-50">Apple pro display XDR</h6> */}
-												</div>
-											</div>
-											<div className="stats mt-2">
-												<div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>5 Night</span></div>
-												<div className="d-flex justify-content-between p-price"><span>Dubai, United Arab Emirates</span><span>4 Nights</span></div>
-												<div className="d-flex justify-content-between p-price"><span>Rush Inn Hotel</span><span>1 Nights</span></div>
-											</div>
-											<div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-4  mb-lg-0 mb-0">
-								<div className="">
-									<div className="d-flex justify-content-center container mt-5">
-										<div className="card p-3 bg-white morphism">
-											{/* <i className="fa fa-apple"></i> */}
-											<div className="about-product text-center mt-2"><img src="https://i.imgur.com/ZGaW52Y.jpeg" width="300" height="250" alt="" />
-												<div>
-													<h4>Singapore</h4>
-													{/* <h6 className="mt-0 text-black-50">Apple pro display XDR</h6> */}
-												</div>
-											</div>
-											<div className="stats mt-2">
-												<div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>6 Night</span></div>
-												<div className="d-flex justify-content-between p-price"><span>Dubai, United Arab Emirates</span><span>3 Nights</span></div>
-												<div className="d-flex justify-content-between p-price"><span>Rush Inn Hotel</span><span>3 Nights</span></div>
-											</div>
-											<div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							{packages}
 						</div>
 						<div className="title-desc text-center px-lg-5">
-							<Link to="/packages" className="btn mt-lg-4 mt-3 read scroll text-white" role="button">View More</Link>
+							<Link to="/package-list" className="btn mt-lg-4 mt-3 read scroll text-white" role="button">View More</Link>
 						</div>
 					</div>
 				</section>
@@ -351,7 +283,7 @@ class Home extends Component {
 									shreeji tours n
                   Travels. Full Paisa Vasool. Thank u Shreeji for making our trip memorable</p>
 									<div className="test-img text-center">
-										<img src="assets/images/test3.jpg" className="img-fluid" alt="" width="70px" height="70px" />
+										<img src="assets/images/user2.png" className="img-fluid" alt="" width="70px" height="70px" />
 									</div>
 									<h3 className="mt-md-2 text-center">Nebula Nairobi</h3>
 									<div className="mobl-footer test-soc text-center">
@@ -359,8 +291,6 @@ class Home extends Component {
 								</div>
 							</div>
 						</div>
-
-
 					</div>
 				</section>
 
@@ -389,6 +319,6 @@ class Home extends Component {
 
 			</div>
 		)
-	}
 }
+
 export default Home

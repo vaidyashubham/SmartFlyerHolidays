@@ -1,28 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_package.json';
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 
 function PackageList() {
 
   // const [packageAPIData, setPackageAPIData] = useState([]);
 
-  useEffect(() => {
-    getPackage();
-  }, [])
+  // useEffect(() => {
+  //   getPackage();
+  // }, [])
 
-  async function getPackage() {
-    try {
-      const response = await fetch(`http://localhost:1337/packages`);
-      const data = await response.json();
-      console.log(data);
-      // setPackageAPIData(data);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
+  // async function getPackage() {
+  //   try {
+  //     const response = await fetch(`http://localhost:1337/packages`);
+  //     const data = await response.json();
+  //     console.log(data);
+  //     setPackageAPIData(data);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+  // console.log(packagesInfo.splice(0, 2))
+  
   const packages = packagesInfo.map(packageData => {
     // console.log(packageData.slug)
     return (
