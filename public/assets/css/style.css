@@ -195,7 +195,7 @@ h2.agile-title {
 }
 
 .csslider>ul>li:first-child {
-    background: url(../images/hone_bg.jpg) no-repeat center;
+    background: url(../images/home-bg.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -1362,7 +1362,7 @@ hr {
     font-size: 1.2em;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #ffc80a;
+    color: #fff;
 }
 
 /* footer grids */

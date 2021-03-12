@@ -7,11 +7,6 @@ class Home extends Component {
 			<div>
 				<div className="banner_w3lspvt" id="home">
 					<div className="csslider infinity" id="slider1">
-						{/* <input type="radio" name="slides" checked="checked" id="slides_1" />
-						<input type="radio" name="slides" id="slides_2" />
-						<input type="radio" name="slides" id="slides_3" />
-						<input type="radio" name="slides" id="slides_4" /> */}
-
 						<ul className="banner_slide_bg">
 							<li>
 								<div className="slider-info bg1">
@@ -68,10 +63,6 @@ class Home extends Component {
 						</ul>
 						<div className="navigation">
 							<div>
-								{/* <label for="slides_1"></label>
-								<label for="slides_2"></label>
-								<label for="slides_3"></label>
-								<label for="slides_4"></label> */}
 							</div>
 						</div>
 					</div>

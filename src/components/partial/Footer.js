@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -9,8 +10,7 @@ class Footer extends Component {
                         <div className="row footer-top-inner-w3ls">
                             <div className="col-lg-6 col-md-6 footer-top ">
                                 <h2>
-                                    <a href="index.html">SmartFlyer Holidays Pvt Ltd
-</a>
+                                    <Link to='/'>SmartFlyer Holidays Pvt Ltd</Link>
                                 </h2>
                                 <p className="my-3">SmartFlyer Holidays Pvt Ltd is committed to providing unparalleled service to our customers.</p>
                             </div>
