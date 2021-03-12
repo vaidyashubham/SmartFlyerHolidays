@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_package.json';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 
 function PackageList() {
@@ -26,7 +26,7 @@ function PackageList() {
   const packages = packagesInfo.map(packageData => {
     // console.log(packageData.slug)
     return (
-      <div className="col-lg-4 mb-lg-0 mb-0" key={packageData.id}>
+      <div className="col-lg-4 mb-lg-0 mb-0" key={packageData.slug}>
         <Link to={`/package-list/${packageData.slug}`}>
           <div className="d-flex justify-content-center container mt-5">
             <div className="card p-3 bg-white morphism">

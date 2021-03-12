@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+// import { useEffect } from "react";
 import packagesInfo from './_package.json';
 import { Link } from 'react-router-dom';
 
@@ -8,20 +8,20 @@ export default function Package() {
 
   // const [packageAPIData, setPackageAPIData] = useState([]);
 
-  useEffect(() => {
-    getPackage();
-  }, [])
+  // useEffect(() => {
+  //   getPackage();
+  // }, [])
 
-  async function getPackage() {
-    try {
-      const response = await fetch(`http://localhost:1337/packages`);
-      const data = await response.json();
-      // console.log(data[0].packageDetails);
-      // setPackageAPIData(data[0].packageDetails);
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  // async function getPackage() {
+  //   try {
+  //     const response = await fetch(`http://localhost:1337/packages`);
+  //     const data = await response.json();
+  //     // console.log(data[0].packageDetails);
+  //     // setPackageAPIData(data[0].packageDetails);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 
   function findPackageBySlug(slug) {
     return packagesInfo.find(o => o.slug === slug);

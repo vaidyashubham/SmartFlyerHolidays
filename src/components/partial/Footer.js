@@ -38,9 +38,23 @@ class Footer extends Component {
                                         </p>
                                     </div>
                                     <div className="last-w3ls-contact my-2">
-                                        <p> <i
-                                            className="fa fa-phone">
-                                        </i> +91 9595016858</p>
+                                        <p>
+                                            <i
+                                                className="fa fa-phone">
+                                            </i> +91 9595016858
+                                        </p>
+                                        <br />
+                                        <p>
+                                            <i
+                                                className="fa fa-phone">
+                                            </i> +91 9067867855
+                                        </p>
+                                        <br />
+                                        <p>
+                                            <i
+                                                className="fa fa-phone">
+                                            </i> +91 9067867833
+                                        </p>
                                     </div>
                                     {/* <div className="last-w3ls-contact">
                                         <p>+ 90 nsequursu dsdesdc,
