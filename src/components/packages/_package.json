@@ -1,0 +1,434 @@
+[
+  {
+    "id": 1,
+    "title": "Bangkok & Pataya",
+    "slug": "bangkok-and-pataya",
+    "image": "https://i.imgur.com/hZdZB0N.jpg",
+    "arrivalAt": "Bangkok",
+    "stay1": "Pattaya, Thailand: 3 Nights",
+    "stay2": "Bangkok, Thailand: 2 Nights",
+    "departureFrom": "Bangkok",
+    "packageDuration": "5 night",
+    "total": "₹ 11300/Person*",
+    "inclusion": [
+      "Food",
+      "Sightseeing",
+      "Hotel"
+    ],
+    "iternary": [
+      {
+        "dayNo": "Day 1",
+        "place": "Arrival at Bangkok Airport - Pattaya",
+        "stay": "Stay at Pattaya, Thailand",
+        "img": "https://i.imgur.com/9noHJjW.jpg",
+        "included": [],
+        "description": "Upon Arrival at Bangkok Airport, Meet and Greet with our local representative. We will take you on a 2 hour drive to the picturesque Pattaya, a breathtakingly beautiful beach destination. Interested travelers will be happy to know that the nightlife of Pattaya is one of the most happening in the world. Rest of the day is at Leisure. overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 2",
+        "place": "Pattaya - Coral Island Tour",
+        "stay": "Stay at Pattaya, Thailand",
+        "img": "https://i.imgur.com/9noHJjW.jpg",
+        "included": [
+          "Breakfast",
+          "Lunch"
+        ],
+        "description": "Enjoy breakfast at the hotel, speedboat your way to the idyllic Coral Island through the sparkling aqua-blue waters of the Gulf of Thailand. Spend the day luxuriating under the warm tropical sun. Relax, swim, snorkel or just lie around sunning on the island's immaculate golden beaches. You can also dive down into the waters for a more personal experience. After a relaxing time at the island, return and relish upon a sumptuous Indian lunch. Enjoy the evening at leisure and comfortably stay overnight at the hotel.Activities Included Half-day Coral Island Tour by Speedboat incl. Lunch "
+      },
+      {
+        "dayNo": "Day 3",
+        "place": "Pattaya - Alcazar Show",
+        "stay": "Stay at Pattaya, Thailand",
+        "img": "https://i.imgur.com/9noHJjW.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "Enjoy breakfast at the hotel. Day free at leisure. In the Evening you be taken for Alcazar Show. A unique female impersonation artists show. The entertainment provided includes full cabaret performances featuring countless lady-man performers wearing some of the most extravagant evening wear you are ever likely to see in a hall employing state-of-the-art light and sound technology. Overnight at the hotel. Activities Included, Evening - Alcazar Show"
+      },
+      {
+        "dayNo": "Day 4",
+        "place": "Pattaya - Bangkok - Bangkok City Tour",
+        "stay": "Stay at Bangkok, Thailand",
+        "img": "https://i.imgur.com/9noHJjW.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "Enjoy breakfast at the hotel, you can say goodbye to Pattaya as today you are going back to the city of temples, spas, endless shopping sprees and a vivid nightlife. Bangkok. After Checking in into the hotel you will be taken to the Half Day Bangkok Temple and city tour. We will Take you through the hustle of Bangkok to visit the capitals most significantly and visually stunning temples. Wat Trimitr, on the edge of Chinatown, which houses the world's largest solid gold Buddha. And visit to Wat Benjamabophit, also known as the marble temple featuring a fusion of Thai and European styles. Rest of the day is at leisure. Overnight at the hotel. Activities Included, Half-day Temples and City Tour"
+      },
+      {
+        "dayNo": "Day 5",
+        "place": "Day free at leisure",
+        "stay": "Stay at Bangkok, Thailand",
+        "img": "https://i.imgur.com/9noHJjW.jpg",
+        "included": [
+          "Breakfast",
+          "Lunch"
+        ],
+        "description": "Enjoy breakfast at the hotel. Day is free at leisure or you can take optional Tour to Safari World and Marine Park or enjoy your day shopping on the busy roads of Bangkok. You can also go to Floating Market Where you can Take a long tail boat ride through the canals to the market where you can stroll around the colourful floating marketplace bustling with boats and vendors selling tropical fruits and other delights. Also you can visit the snake farm, elephant riding or take a paddle boat around the market."
+      },
+      {
+        "dayNo": "Day 6",
+        "place": "Departure from Bangkok",
+        "stay": "",
+        "img": "https://i.imgur.com/9noHJjW.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel, check out from hotel @ 12:00 hrs and proceed to Bangkok airport for your onward journey."
+      }
+    ],
+    "photos": [
+      "https://i.imgur.com/9noHJjW.jpg",
+      "https://i.imgur.com/9noHJjW.jpg",
+      "https://i.imgur.com/9noHJjW.jpg",
+      "https://i.imgur.com/9noHJjW.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dubai",
+    "slug": "dubai",
+    "image": "https://i.imgur.com/SKZlmM9.png",
+    "arrivalAt": "Dubai",
+    "stay1": "Dubai, United Arab Emirates - 4 Nights",
+    "stay2": "",
+    "departureFrom": "Dubai",
+    "packageDuration": "5 night",
+    "total": "₹ 19350/Person*",
+    "inclusion": [
+      "Food",
+      "Sightseeing",
+      "Hotel",
+      "Transfer"
+    ],
+    "iternary": [
+      {
+        "dayNo": "Day 1",
+        "place": "Arrival Dubai at - Dhow Cruise",
+        "stay": "Stay at Dubai, United Arab Emirates",
+        "img": "https://i.imgur.com/SKZlmM9.png",
+        "included": [
+          "Dinner"
+        ],
+        "description": "Upon arrival at Dubai airport do the custom clearance. Meet & greet our local representative & take transfers to Hotel. Take rest at hotel lobby till the time wait for check in @ 14:00 hrs. In the evening enjoy Dhow Cruise with dinner pick up @ 19:00 hrs. The two-hour Dubai Dhow cruise that usually begins after sunset covers almost the entire of Dubai Creek. As you gaze at the splendid views of the Creek wherein the modern era's classiness joins hands with the aura and charm of olden times, our traditional Arabian Dhow Cruise Dubai provides you with an as never before sightseeing experience while allowing you to savor a wide range of freshly prepared international gourmet specialties and enjoy a spectrum of onboard activities including live music performances and traditional Tanura dance shows. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 2",
+        "place": "City tour & Desert Safari",
+        "stay": "Stay at Dubai, United Arab Emirates",
+        "img": "https://i.imgur.com/SKZlmM9.png",
+        "included": [
+          "Dinner"
+        ],
+        "description": "After breakfast at the hotel, enjoy morning half day city tour pick up @ 09:00 hrs. The half day city tour is one of the best ways to explore the both historic and glittering side of Dubai that is often referred to as the Middle East's gem. Starting from Dubai Creek, the tour includes a visit to Dubai Museum that is housed within the 18th century Al Fahidi Fort. It has on display arts and artifacts reflecting the ancient history and lifestyle of traditional Arabs. An ideal illustration of a blend of outstanding Islamic and contemporary architecture, Jumeirah Mosque is another popular point of interest covered in the itinerary. After that drop back at hotel take lunch by own. In the afternoon enjoy Desert Safari tour with dinner pick up @ 15:30 hrs. Where you will experience an exhilarating escapade of a lifetime. It offers six hours of untainted fun and heart-stopping activities in one of the biggest as well as magnificent deserts in the Arabian Peninsula. Desert Safari in Dubai is a mix of adventure, cultural entertainment, and sumptuous dinner under the stars. Overnight at the hotel. Activities Included, Desert Safari with Dinner | Half Day Dubai City Tour"
+      },
+      {
+        "dayNo": "Day 3",
+        "place": "Day free for leisure",
+        "stay": "Stay at Dubai, United Arab Emirates",
+        "img": "https://i.imgur.com/SKZlmM9.png",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel, day is free for leisure to enjoy on your own or you can take an optional tour to Aqua Venture & Lost Chamber. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 4",
+        "place": "Burj Khalifa",
+        "stay": "Stay at Dubai, United Arab Emirates",
+        "img": "https://i.imgur.com/SKZlmM9.png",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at hotel, you will be taken to visit the world's tallest building - Burj Khalifa. At the Burj Khalifa you will experience a ride in the world's third fastest elevator that whips you through 124 levels above the ground transporting you to the paramount of ecstasy. The Observation Deck aptly named At the Top will feast your eyes with a 360-degree panoramic view of the city, the golden desert and the Persian Gulf. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 5",
+        "place": "Departure from Dubai",
+        "stay": "",
+        "img": "https://i.imgur.com/SKZlmM9.png",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel, check out from hotel @ 12:00 hrs and proceed to Dubai airport for your onward journey."
+      }
+    ],
+    "photos": [
+      "https://i.imgur.com/SKZlmM9.png",
+      "https://i.imgur.com/SKZlmM9.png",
+      "https://i.imgur.com/SKZlmM9.png",
+      "https://i.imgur.com/SKZlmM9.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Singapore",
+    "slug": "singapore",
+    "image": "https://i.imgur.com/HjjIa3P.jpg",
+    "arrivalAt": "Singapore",
+    "stay1": "",
+    "stay2": "",
+    "departureFrom": "Singapore",
+    "packageDuration": "6 night",
+    "total": "₹ 26700/Person*",
+    "inclusion": [
+      "Food",
+      "Transfer",
+      "Sightseeing",
+      "Hotel"
+    ],
+    "iternary": [
+      {
+        "dayNo": "Day 1",
+        "place": "Arrival at Singapore Airport",
+        "stay": "Stay at Singapore, Singapore",
+        "img": "https://i.imgur.com/HjjIa3P.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "Board your flight from your respective hub. On arrival at Singapore Airport, do the custom clearance and meet & greet with our local representative & take transfers to hotel. Rest of the day is at leisure. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 2",
+        "place": "Singapore Half Day City Tour & Night Safari",
+        "stay": "Stay at Singapore, Singapore",
+        "img": "https://i.imgur.com/HjjIa3P.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel. We will proceed to see the beautiful city of Singapore-City Hall Parliament House, the Tower-like Westin Stamford Hotel and Mount Faber. Later in evening, we proceed for the tour to Nocturnal Night safari tour of Singapore - 3.5 hrs Duration. The world First wildlife park built for visit at night, the night safari is not like any ordinary zoo illuminated by the night or modern version of nocturnal houses in many zoos around the globe. Nestled in 40 Hectares of lush secondary forest, the night safari offers guest the unique experience of exploring wildlife in a tropical jungle at Night. Later move to your hotel. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 3",
+        "place": "Sentosa Island Tour",
+        "stay": "Stay at Singapore, Singapore",
+        "img": "https://i.imgur.com/HjjIa3P.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel. More fun awaits you at Sentosa Island. Visit the Underwater World, Asia's most popular oceanarium and home to more than 2,500 marine animals. Delight yourself at the Dolphin Lagoon and get a rare opportunity to interact with the charming pink dolphins. Stroll down the 120-metre long mosaic walkway, the Merlion Walk. We wrap up the evening with the 'Songs of the Sea' Show, which is a spectacular display of light and sound show. You can do shopping at Mustafa/ Suntec Mall. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 4",
+        "place": "Day Free For Leisure",
+        "stay": "Stay at Singapore, Singapore",
+        "img": "https://i.imgur.com/HjjIa3P.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel, day is free for leisure to enjoy on your own or you can take an optional tour to Universal Studio . Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 5",
+        "place": "Day free for leisure",
+        "stay": "Stay at Singapore, Singapore",
+        "img": "https://i.imgur.com/HjjIa3P.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel, day is free for leisure to enjoy on your own or you can take an optional tour to Jurong Bird Park . Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 6",
+        "place": "Departure from Singapore",
+        "stay": "Stay at Singapore, Singapore",
+        "img": "https://i.imgur.com/HjjIa3P.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel, check out from hotel @ 12:00 hrs and proceed to Singapore airport for your onward journey."
+      }
+    ],
+    "photos": [
+      "https://i.imgur.com/HjjIa3P.jpg",
+      "https://i.imgur.com/HjjIa3P.jpg",
+      "https://i.imgur.com/HjjIa3P.jpg",
+      "https://i.imgur.com/HjjIa3P.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Bali",
+    "slug": "bali",
+    "image": "https://i.imgur.com/IWt2HeU.jpg",
+    "arrivalAt": "Bali",
+    "stay1": "Bali, Indonesia - 5 Nights",
+    "stay2": "",
+    "departureFrom": "Bali",
+    "packageDuration": "6 night",
+    "total": "₹ 14100/Person*",
+    "inclusion": [
+      "Food",
+      "Transfer",
+      "Sightseeing",
+      "Hotel"
+    ],
+    "iternary": [
+      {
+        "dayNo": "Day 1",
+        "place": "Arrival at Bali",
+        "stay": "Stay at Ibis Bali Kuta OR Similar",
+        "img": "https://i.imgur.com/IWt2HeU.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "Arrival at Beautiful Bali. After Immigration ( Visa on Arrival ) meet and greet with our representative and transfer to respective hotel at Bali. Welcome drink on arrival. Check in hotel, and whole day is free at your own. Comfortable overnight stay at the hotel."
+      },
+      {
+        "dayNo": "Day 2",
+        "place": "Full Day Kintamani & Ubud City Tour",
+        "stay": "Stay at Ibis Bali Kuta OR Similar",
+        "img": "https://i.imgur.com/IWt2HeU.jpg",
+        "included": [
+          "Breakfast",
+          "Lunch"
+        ],
+        "description": "After breaqkfast at the hotel. We visit Celuk & Mas, Goa Gajah Temple, Ubud Monkey Forest, Kintamani, Tegalalang Rice. As the best city of the world according to Leisure Magazine Ubud which is known as the artist colony offering different ambience where the local culture and world art influence are mixing together. Variant shopping option is available, from the local art market to high class boutique outlet. Most world tasted restaurant, coffee house and local warung is available. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 3",
+        "place": "Full Day At Leisure",
+        "stay": "Stay at Ibis Bali Kuta OR Similar",
+        "img": "https://i.imgur.com/IWt2HeU.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at hotel, day is free for leisure or can take a sun bath on the beach, go for a swim or relax at your hotel room. Overnight stay in Hotel."
+      },
+      {
+        "dayNo": "Day 4",
+        "place": "Full Day Denpasar City Tour Followed By Tanah Lot Temple",
+        "stay": "Stay at Ibis Bali Kuta OR Similar",
+        "img": "https://i.imgur.com/IWt2HeU.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at the hotel. We visit Bajra Shandhi Incl. entrance to 3D Interactive Art Museum, Bali Museum, Puputan Square and Tanah Lot Temple. It is a beautiful monument to commemorate the Balinese struggle against the Dutch colonialism that is replicated in a beautiful and artistic building design by Balinese architectures in form of Bajra (Bell). Bali Museum is one of the amous Places to visit in Denpasar city collecting the ancient object related to the history of Bali Island generally. Tanah Lot Sea Temple is one of the Balis most photographed. Perched atop an enormous. Rock, the temple is completely surrounded by the waters of the Indian Ocean. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 5",
+        "place": "Full Day At Leisure",
+        "stay": "Stay at Ibis Bali Kuta OR Similar",
+        "img": "https://i.imgur.com/IWt2HeU.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast at hotel, day is free for leisure or can take a sun bath on the beach, go for a swim or relax at your hotel room. Overnight stay in Hotel."
+      },
+      {
+        "dayNo": "Day 6",
+        "place": "Departure from Bali",
+        "stay": "",
+        "img": "https://i.imgur.com/IWt2HeU.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After enjoying breakfast, check-out of your hotel in morning and proceed to the airport to board the return flight."
+      }
+    ],
+    "photos": [
+      "https://i.imgur.com/IWt2HeU.jpg",
+      "https://i.imgur.com/IWt2HeU.jpg",
+      "https://i.imgur.com/IWt2HeU.jpg",
+      "https://i.imgur.com/IWt2HeU.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Turkey",
+    "slug": "turkey",
+    "image": "https://i.imgur.com/picNpgx.jpg",
+    "arrivalAt": "Turkey",
+    "stay1": "",
+    "stay2": "",
+    "departureFrom": "Turkey",
+    "packageDuration": "7 Days",
+    "total": "₹ 36450/Person*",
+    "inclusion": [
+      "Food",
+      "Transfer",
+      "Sightseeing",
+      "Hotel"
+    ],
+    "iternary": [
+      {
+        "dayNo": "Day 1",
+        "place": "Arrival At Istanbul",
+        "stay": "Stay at Stay at Istanbul , Turkey",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "On Arrival at Istanbul. We will meet you at the Airport and transfer to your hotel, check in and leissure time untill the evening pick up for dinner cruise. Post tour return back to the hotel. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 2",
+        "place": "Istanbul Old City Tour",
+        "stay": "Stay at Stay at Istanbul , Turkey",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast, proceed for full day Old City tour of Istanbul. In this full day tour, you will visit St Sophia Museum, the pride of the Byzantine architecture, Byzantine Hippodrome, where once chariot races were held; the Blue Mosque, famous for its blue Iznik tiles; and enjoy shopping in the worlds largest covered bazaar with 4000 shops, is known as Grand Bazaar. After lunch, you will visit Topkapi Palace, the famous residence of the Sultans (The Harem section is not included in the tour). Imperial Treasury, gardens, Sultans kitchen, Sacred Relics. Post tour return back to the hotel. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 3",
+        "place": "Istanbul - Cappadoccia",
+        "stay": "Stay at Stay at Cappadocia, Turkey",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast",
+          "Lunch"
+        ],
+        "description": "After breakfast, transfer to the Airport upon flight to Cappadoccia, After flight transfer to hotel check in and leissure time there. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 4",
+        "place": "Cappadoccia North Tour",
+        "stay": "Stay at Stay at Cappadocia, Turkey",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast",
+          "Lunch"
+        ],
+        "description": "After breakfast, proceed for Cappadoccia North Tour. In the morning, first meeting with the lunar landscape of Cappadocia: rock formations beyond belief in Devrent Valley. Visit to Pasabag fairy chimneys where the voice of wind mixes with the songs of faires near Zelve. Lunch in Avanos, centre of terra cotta work of art since 3000 BC.and a demonstration in a traditional pottery workshop. Afternoon, visit the famous Goreme Open Air Museum and see the best examples of Byzantine art in Cappadocia in rock cut churches with frescoes and paintings ( 10th to 13th century ). Continue to panoramic view point Esentepe. With a spectacular view over Goreme, see the complete view of Goreme valley and Goreme village: fairy chimneys, rock formations and cave houses. End your day with Uchisar Castle. This tall rock, the highest point of the Goreme region. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 5",
+        "place": "Cappadoccia - Antalya",
+        "stay": "Stay at Stay at Antalya, Turkey",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast , transfer to the Airport upon take a connected flight to Antalya, After flight transfer to hotel, check in & relax. Overnight at hotel."
+      },
+      {
+        "dayNo": "Day 6",
+        "place": "Antalya City Tour",
+        "stay": "Stay at Stay at Antalya, Turkey",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast, proceed for City tour of Antalya. The highlights on this tour include a visit to Hadrians Gate, the Clock Tower at Kalekapisi, Republic Square and with its dramatic statue and excellent views of the Mediterranean Coast and the distant Olympos Mountains. Descending from the square, we will explore the narrow, winding streets of historic Old Antalya (Kaleii), filled with graceful,Ottoman era houses and gardens. Our next stop is the Duden II Waterfall that is at the highest cliff of Lara Beach. We will finish the tour with a visit to the archaeological museum. Overnight at the hotel."
+      },
+      {
+        "dayNo": "Day 7",
+        "place": "Departure From Anatalya",
+        "stay": "",
+        "img": "https://i.imgur.com/picNpgx.jpg",
+        "included": [
+          "Breakfast"
+        ],
+        "description": "After breakfast, transfer to the Airport, upon flight to Istanbul. End of the our services. Hope you are leaving from Turkey with unforgattable memories."
+      }
+    ],
+    "photos": [
+      "https://i.imgur.com/picNpgx.jpg",
+      "https://i.imgur.com/picNpgx.jpg",
+      "https://i.imgur.com/picNpgx.jpg",
+      "https://i.imgur.com/picNpgx.jpg"
+    ]
+  }
+]
