@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function Package() {
 
-  const [packageAPIData, setPackageAPIData] = useState([]);
+  // const [packageAPIData, setPackageAPIData] = useState([]);
 
   useEffect(() => {
     getPackage();
@@ -17,7 +17,7 @@ export default function Package() {
       const response = await fetch(`http://localhost:1337/packages`);
       const data = await response.json();
       // console.log(data[0].packageDetails);
-      setPackageAPIData(data[0].packageDetails);
+      // setPackageAPIData(data[0].packageDetails);
     } catch (err) {
       console.log(err);
     }

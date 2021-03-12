@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 function PackageList() {
 
-  const [packageAPIData, setPackageAPIData] = useState([]);
+  // const [packageAPIData, setPackageAPIData] = useState([]);
 
   useEffect(() => {
     getPackage();
@@ -17,7 +17,7 @@ function PackageList() {
       const response = await fetch(`http://localhost:1337/packages`);
       const data = await response.json();
       console.log(data);
-      setPackageAPIData(data);
+      // setPackageAPIData(data);
     } catch (err) {
       console.log(err);
     }
