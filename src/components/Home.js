@@ -261,7 +261,7 @@ function Home() {
 								</div>
 							</div>
 						</div>
-						<div className="col-md-4 test-grid text-left px-lg-3">
+						<div className="col-md-4 test-grid text-left px-lg-3 mb-3">
 							<div className="card p-3 text-center test-info morphism">
 								<p>We had great time traveling with SmartFlyer Holidays Pvt Ltd. I planned my first
 								ever international
@@ -275,7 +275,7 @@ function Home() {
 								</div>
 							</div>
 						</div>
-						<div className="col-md-4 test-grid text-left px-lg-3">
+						<div className="col-md-4 test-grid text-left px-lg-3 mb-3">
 							<div className="card p-3 text-center test-info morphism">
 								<p>It was a great experience visiting Assam n Meghalaya with Shreeji tours n travels. It was
 								perfectly planned tour,

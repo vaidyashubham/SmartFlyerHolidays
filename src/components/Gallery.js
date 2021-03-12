@@ -25,7 +25,7 @@ export default function Gallery() {
         return (
             <div className="col-md-4 col-sm-6 gal-img" key={img.id}>
                 <a href={`#${img.id}`} >
-                    <img src={`https://mysterious-wildwood-48575.herokuapp.com${img.url}`} alt="aegis" className="img-fluid-1 mt-4" />
+                    <img src={`${img.url}`} alt="aegis" className="img-fluid-1 mt-4" />
                 </a>
             </div>
 
