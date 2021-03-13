@@ -34,7 +34,7 @@ function ContactForm() {
     if (Object.keys(fieldErrors).length > 0) {
       validate();
     }
-  }, );
+  }, [inputs]);
   /* End new validation ^^^^ */
 
 
@@ -84,20 +84,18 @@ function ContactForm() {
   };
 
   return (
-    <div>
-      {/* <h1>Contact Us</h1> */}
-      <form className="contact1-form validate-form" onSubmit={handleOnSubmit} noValidate>
-        {serverState.status && (
-          <h5 className={!serverState.status.ok ? "errorMsg" : "text-center text-success font-weight-bold pb-3"}>
-            {serverState.status.msg}
-          </h5>
-        )}
+    <form className="contact1-form validate-form" onSubmit={handleOnSubmit} noValidate>
+      {serverState.status && (
+        <h5 className={!serverState.status.ok ? "errorMsg" : "text-center text-success font-weight-bold pb-3"}>
+          {serverState.status.msg}
+        </h5>
+      )}
 
-        <span className="contact1-form-title">
-          Get in touch
+      <span className="contact1-form-title">
+        Get in touch
         </span>
 
-        {/* <div className="wrap-input1 validate-input" data-validate="Name is required">
+      {/* <div className="wrap-input1 validate-input" data-validate="Name is required">
           <input
             className="input1"
             id="name"
@@ -111,22 +109,22 @@ function ContactForm() {
           <span className="shadow-input1"></span>
         </div> */}
 
-        <div className="wrap-input1 validate-input">
-          <input
-            className="input1"
-            id="email"
-            type="email"
-            name="email"
-            onChange={handleOnChange}
-            value={inputs.email}
-            // className={fieldErrors.email ? "error" : ""}
-            placeholder="Email"
-          />
-          {renderFieldError("email")}
-          <span className="shadow-input1"></span>
-        </div>
+      <div className="wrap-input1 validate-input">
+        <input
+          className="input1"
+          id="email"
+          type="email"
+          name="email"
+          onChange={handleOnChange}
+          value={inputs.email}
+          // className={fieldErrors.email ? "error" : ""}
+          placeholder="Email"
+        />
+        {renderFieldError("email")}
+        <span className="shadow-input1"></span>
+      </div>
 
-        {/* <div className="wrap-input1 validate-input">
+      {/* <div className="wrap-input1 validate-input">
           <input
             className="input1"
             id="subject"
@@ -140,33 +138,32 @@ function ContactForm() {
           <span className="shadow-input1"></span>
         </div> */}
 
-        <div className="wrap-input1 validate-input" data-validate="Message is required">
-          <textarea
-            id="message"
-            name="message"
-            className="input1"
-            placeholder="Message"
-            onChange={handleOnChange}
-            value={inputs.message}
-          // className={fieldErrors.message ? "error" : ""}
-          ></textarea>
-          {renderFieldError("message")}
-          <span className="shadow-input1"></span>
-        </div>
+      <div className="wrap-input1 validate-input" data-validate="Message is required">
+        <textarea
+          id="message"
+          name="message"
+          className="input1"
+          placeholder="Message"
+          onChange={handleOnChange}
+          value={inputs.message}
+        // className={fieldErrors.message ? "error" : ""}
+        ></textarea>
+        {renderFieldError("message")}
+        <span className="shadow-input1"></span>
+      </div>
 
 
-        <div className="container-contact1-form-btn">
-          <button className="contact1-form-btn" type="submit" disabled={serverState.submitting}>
-            <span>
-              Send Email
+      <div className="container-contact1-form-btn">
+        <button className="contact1-form-btn" type="submit" disabled={serverState.submitting}>
+          <span>
+            Send Email
                   <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
+          </span>
+        </button>
+      </div>
 
-        
-      </form>
-    </div>
+    </form>
+
   );
 };
 
