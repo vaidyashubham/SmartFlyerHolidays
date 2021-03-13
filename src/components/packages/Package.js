@@ -1,27 +1,31 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
-// import { useEffect } from "react";
+import { useEffect, useState} from "react";
 import packagesInfo from './_package.json';
 import { Link } from 'react-router-dom';
 
 export default function Package() {
 
-  // const [packageAPIData, setPackageAPIData] = useState([]);
+  const [packageAPIData, setPackageAPIData] = useState([]);
 
-  // useEffect(() => {
-  //   getPackage();
-  // }, [])
+  useEffect(() => {
+    getPackage();
+  }, [])
 
-  // async function getPackage() {
-  //   try {
-  //     const response = await fetch(`http://localhost:1337/packages`);
-  //     const data = await response.json();
-  //     // console.log(data[0].packageDetails);
-  //     // setPackageAPIData(data[0].packageDetails);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
+  async function getPackage() {
+    try {
+      const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
+      const data = await response.json();
+      // console.log(data);
+      setPackageAPIData(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  function findPackageBySlugg(slug) {
+    return packageAPIData.find(o => o.packageDetails.slug === slug);
+  }
 
   function findPackageBySlug(slug) {
     return packagesInfo.find(o => o.slug === slug);
@@ -30,6 +34,9 @@ export default function Package() {
   let { slug } = useParams();
   const packageData = findPackageBySlug(slug);
   // console.log(packageData);
+
+  const packageAPIInfo = findPackageBySlugg(slug);
+  // console.log(packageAPIInfo.id);
 
   const { iternary, inclusion, photos } = packageData;
 

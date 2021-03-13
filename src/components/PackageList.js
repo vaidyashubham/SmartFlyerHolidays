@@ -1,50 +1,40 @@
 import React from 'react'
-import packagesInfo from './packages/_package.json';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
 
 function PackageList() {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    getPackage();
   }, [])
 
-  // const [packageAPIData, setPackageAPIData] = useState([]);
+  const [packageAPIData, setPackageAPIData] = useState([]);
 
-  // useEffect(() => {
-  //   getPackage();
-  // }, [])
+  async function getPackage() {
+    const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
+    const data = await response.json();
+    console.log(data);
+    setPackageAPIData(data);
+  }
 
-  // async function getPackage() {
-  //   try {
-  //     const response = await fetch(`http://localhost:1337/packages`);
-  //     const data = await response.json();
-  //     console.log(data);
-  //     setPackageAPIData(data);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
-  // console.log(packagesInfo.splice(0, 2))
-
-  const packages = packagesInfo.map(packageData => {
-    // console.log(packageData.slug)
+  const packages = packageAPIData.map(packageData => {
     return (
-      <div className="col-lg-4 mb-lg-0 mb-0" key={packageData.slug}>
-        <Link to={`/package-list/${packageData.slug}`}>
+      <div className="col-lg-4 mb-lg-0 mb-0" key={packageData.packageDetails.slug}>
+        <Link to={`/package-list/${packageData.packageDetails.slug}`}>
           <div className="d-flex justify-content-center container mt-5">
             <div className="card p-3 bg-white morphism">
-              <div className="about-product text-center mt-2"><img src={packageData.image} alt="" width="300" height="250" />
+              <div className="about-product text-center mt-2"><img src={packageData.packageDetails.image} alt="" width="300" height="250" />
                 <div>
-                  <h4 className="pt-1">{packageData.title}</h4>
+                  <h4 className="pt-1">{packageData.packageDetails.title}</h4>
                 </div>
               </div>
               <div className="stats mt-2">
-                <div className="d-flex justify-content-between p-price text-dark"><span>Package Duration</span><span>{packageData.packageDuration}</span></div>
+                <div className="d-flex justify-content-between p-price text-dark"><span>Package Duration</span><span>{packageData.packageDetails.packageDuration}</span></div>
                 {/* <div className="d-flex justify-content-between p-price"><span>Pattaya, Thailand</span><span>3 Nights</span></div>
                   <div className="d-flex justify-content-between p-price"><span>Bangkok, Thailand</span><span>2 Nights</span></div> */}
               </div>
-              <div className="d-flex justify-content-between total font-weight-bold mt-1 text-dark"><span>Starting at only</span><span>{packageData.total}</span>
+              <div className="d-flex justify-content-between total font-weight-bold mt-1 text-dark"><span>Starting at only</span><span>{packageData.packageDetails.total}</span>
               </div>
             </div>
           </div>
@@ -52,8 +42,6 @@ function PackageList() {
       </div>
     );
   });
-
-  // return <div className="blog">{posts}</div>;
 
   return (
     <div>
@@ -65,129 +53,7 @@ function PackageList() {
           <h3 className="heading text-center mb-3 mb-sm-5">Our Packages</h3>
           <div className="row pricing-grids">
             {packages}
-            {/* <div className="col-lg-4  mb-lg-0 mb-0">
-              <Link to="/bangkok-and-pataya">
-                <div className="d-flex justify-content-center container mt-5">
-                  <div className="card p-3 bg-white morphism">
-                    <div className="about-product text-center mt-2"><img src="https://i.imgur.com/hZdZB0N.jpg" width="300" height="250" />
-                      <div>
-                        <h4>Bangkok and Pataya</h4>
-                      </div>
-                    </div>
-                    <div className="stats mt-2">
-                      <div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>5 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Pattaya, Thailand</span><span>3 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Bangkok, Thailand</span><span>2 Nights</span></div>
-                    </div>
-                    <div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-lg-4  mb-lg-0 mb-0">
-              <div className="">
-                <div className="d-flex justify-content-center container mt-5">
-                  <div className="card p-3 bg-white morphism">
-                    <div className="about-product text-center mt-2"><img src="https://i.imgur.com/SKZlmM9.png" width="300" height="250" />
-                      <div>
-                        <h4>Dubai</h4>
-                      </div>
-                    </div>
-                    <div className="stats mt-2">
-                      <div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>5 Night</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Dubai, United Arab Emirates</span><span>4 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Rush Inn Hotel</span><span>1 Nights</span></div>
-                    </div>
-                    <div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4  mb-lg-0 mb-0">
-              <div className="">
-                <div className="d-flex justify-content-center container mt-5">
-                  <div className="card p-3 bg-white morphism">
-                    <div className="about-product text-center mt-2"><img src="https://i.imgur.com/ZGaW52Y.jpeg" width="300" height="250" />
-                      <div>
-                        <h4>Singapore</h4>
-                      </div>
-                    </div>
-                    <div className="stats mt-2">
-                      <div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>6 Night</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Dubai, United Arab Emirates</span><span>3 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Rush Inn Hotel</span><span>3 Nights</span></div>
-                    </div>
-                    <div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
-          {/* <div className="row pricing-grids">
-            <div className="col-lg-4  mb-lg-0 mb-0">
-              <div className="">
-                <div className="d-flex justify-content-center container mt-5">
-                  <div className="card p-3 bg-white morphism">
-                    <div className="about-product text-center mt-2"><img src="https://i.imgur.com/IRuRMvy.jpg" width="300" height="250" />
-                      <div>
-                        <h4>Bally</h4>
-                      </div>
-                    </div>
-                    <div className="stats mt-2">
-                      <div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>6 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Bally, Indonesia</span><span>3 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Bangkok, Thailand</span><span>3 Nights</span></div>
-                    </div>
-                    <div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4  mb-lg-0 mb-0">
-              <div className="">
-                <div className="d-flex justify-content-center container mt-5">
-                  <div className="card p-3 bg-white morphism">
-                    <div className="about-product text-center mt-2"><img src="https://i.imgur.com/picNpgx.jpeg" width="300" height="250" />
-                      <div>
-                        <h4>Turkey</h4>
-                      </div>
-                    </div>
-                    <div className="stats mt-2">
-                      <div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>7 Night</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Dubai, United Arab Emirates</span><span>4 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Rush Inn Hotel</span><span>3 Nights</span></div>
-                    </div>
-                    <div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4  mb-lg-0 mb-0">
-              <div className="">
-                <div className="d-flex justify-content-center container mt-5">
-                  <div className="card p-3 bg-white morphism">
-                    <div className="about-product text-center mt-2"><img src="https://i.imgur.com/ZGaW52Y.jpeg" width="300" height="250" />
-                      <div>
-                        <h4>Singapore</h4>
-                      </div>
-                    </div>
-                    <div className="stats mt-2">
-                      <div className="d-flex justify-content-between p-price"><span>Package Duration</span><span>6 Night</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Dubai, United Arab Emirates</span><span>3 Nights</span></div>
-                      <div className="d-flex justify-content-between p-price"><span>Rush Inn Hotel</span><span>3 Nights</span></div>
-                    </div>
-                    <div className="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>₹ 11300/Person*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
     </div>
