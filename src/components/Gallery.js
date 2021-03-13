@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Breadcrumb from './Breadcrumb';
 
 export default function Gallery() {
 
@@ -47,14 +47,7 @@ export default function Gallery() {
         <div>
             <section className="inner-page-banner" id="home">
             </section>
-            <div className="breadcrumb-agile">
-                <ol className="breadcrumb mb-0">
-                    <li className="breadcrumb-item">
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li className="breadcrumb-item active" aria-current="page">Gallery</li>
-                </ol>
-            </div>
+            <Breadcrumb pageTitle="Gallery"/>
             <section className="gallery py-5" id="gallery">
                 <div className="container py-md-5">
                     <h3 className="heading text-center mb-3 mb-sm-5">Our Gallery</h3>

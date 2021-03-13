@@ -1,10 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_package.json';
-// import { useEffect } from "react";
-
+import { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import Breadcrumb from './Breadcrumb';
 
 function PackageList() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   // const [packageAPIData, setPackageAPIData] = useState([]);
 
@@ -23,7 +26,7 @@ function PackageList() {
   //   }
   // }
   // console.log(packagesInfo.splice(0, 2))
-  
+
   const packages = packagesInfo.map(packageData => {
     // console.log(packageData.slug)
     return (
@@ -56,14 +59,7 @@ function PackageList() {
     <div>
       <section className="inner-page-banner" id="home">
       </section>
-      <div className="breadcrumb-agile">
-        <ol className="breadcrumb mb-0">
-          <li className="breadcrumb-item">
-            <Link to='/'>Home</Link>
-          </li>
-          <li className="breadcrumb-item active" aria-current="page">Packages</li>
-        </ol>
-      </div>
+      <Breadcrumb pageTitle="Packages" />
       <section className="banner-bottom py-5" id="exp">
         <div className="container py-md-5">
           <h3 className="heading text-center mb-3 mb-sm-5">Our Packages</h3>

@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_home_packages.json';
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 function Home() {
 	// const data = packagesInfo.splice(0, 3);
 	// console.log(data);
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 
 	const packages = packagesInfo.map(packageData => {
 		return (

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Footer extends Component {
+    
     render() {
         return (
             <footer className="footer-content">
@@ -56,17 +57,11 @@ class Footer extends Component {
                                             </i> +91 9067867833
                                         </p>
                                     </div>
-                                    {/* <div className="last-w3ls-contact">
-                                        <p>+ 90 nsequursu dsdesdc,
-                                    <br />xxx Honey State 049436.</p>
-                                    </div> */}
                                 </div>
                             </div>
-
                         </div>
-
-                        <p className="copy-right-grids text-li text-center my-sm-4 my-4">© 2019 SmartFlyer. All Rights Reserved | Design by
-                    <a href="http://w3layouts.com/"> W3layouts </a>
+                        <p className="copy-right-grids text-li text-center my-sm-4 my-4">© 2019 SmartFlyer. All Rights Reserved | Design & Developed by
+                    <a href="https://shubhamvaidya.netlify.app/"> Shubham Vaidya </a>
                         </p>
                         <div className="w3ls-footer text-center mt-4">
                             <ul className="list-unstyled w3ls-icons">
@@ -92,7 +87,7 @@ class Footer extends Component {
                                 </li>
                             </ul>
                         </div>
-                        <div className="move-top text-right"><a href="/#home" className="move-top"> <span className="fa fa-angle-up  mb-3" aria-hidden="true"></span></a></div>
+                        {/* <div className="move-top text-right"><Link to="/" className="move-top"> <span className="fa fa-angle-up  mb-3" aria-hidden="true"></span></Link></div> */}
                     </div>
                     {/* <!-- //footer bottom --> */}
                 </div>

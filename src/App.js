@@ -4,13 +4,12 @@ import Home from './components/Home';
 import Navbar from './components/partial/Navbar';
 import Footer from './components/partial/Footer';
 import About from './components/About';
-// import Services from './components/Services';
-// import Single from './components/Single';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import PackageList from './components/PackageList';
 import Package from './components/packages/Package';
 import PageNotFound from './components/PageNotFound';
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
@@ -26,6 +25,7 @@ function App() {
           <Route path='/contact' component={Contact} />
           <Route path="*" component={PageNotFound} />
         </Switch>
+        <ScrollToTop smooth color="#f25c54" />
         <Footer />
       </Router>
 

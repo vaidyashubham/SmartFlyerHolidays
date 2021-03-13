@@ -30,7 +30,7 @@ class Navbar extends Component {
 										<NavLink exact to='/gallery' activeClassName="navbar__link--active"
 											className="navbar__link">Gallery</NavLink></li>
 									<li className="mr-lg-3 mr-2">
-										<NavLink exact to='/package-list' activeClassName="navbar__link--active"
+										<NavLink to='/package-list' activeClassName="navbar__link--active"
 											className="navbar__link" >Packages</NavLink>
 									</li>
 									<li className="mr-lg-3 mr-2">
