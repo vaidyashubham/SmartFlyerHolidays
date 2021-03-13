@@ -10,6 +10,7 @@ import PackageList from './components/PackageList';
 import PackageDetails from './components/packages/PackageDetails';
 import PageNotFound from './components/PageNotFound';
 import ScrollToTop from "react-scroll-to-top";
+import Whatsapp from './components/Whatsapp';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="*" component={PageNotFound} />
         </Switch>
         <ScrollToTop smooth color="#f25c54" />
-        
+        <Whatsapp/>
         <Footer />
       </Router>
 

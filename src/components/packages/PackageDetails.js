@@ -11,7 +11,8 @@ export default function PackageDetails() {
 
   useEffect(() => {
     getPackage();
-  }, )
+    window.scrollTo(0, 0)
+  })
 
   let { slug } = useParams();
 
