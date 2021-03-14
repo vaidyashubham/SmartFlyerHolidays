@@ -2192,7 +2192,7 @@ textarea.input1+.shadow-input1 {
 .welcome-grid:hover i,
 .welcome-grid:hover h4,
 .welcome-grid:hover p {
-    
+
     color: #fff !important;
     transition: 0.5s ease-out;
 }
@@ -2504,4 +2504,33 @@ textarea.input1+.shadow-input1 {
         right: 10px;
         font-size: 22px;
     }
+}
+
+/* Subscribe newsletter */
+
+.subscribe .subscribe-right>div input {
+    outline: none;
+    padding: 16px 20px;
+    color: #333;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: 100%;
+    border: 1px solid #ddd;
+    text-align: center;
+    background: #F9FAFF;
+}
+
+.subscribe .subscribe-right>div button {
+    background: #f25c54;
+    transition: all 0.25s ease;
+    color: #fff;
+    padding: 0.9em 3em;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    width: -webkit-fill-available;
+    margin-top: 10px;
+    box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
 }

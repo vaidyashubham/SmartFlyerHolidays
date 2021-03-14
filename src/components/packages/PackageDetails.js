@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Loader from "react-loader-spinner";
+import BannerImg from '../BannerImg';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function PackageDetails() {
@@ -11,7 +12,7 @@ export default function PackageDetails() {
 
   useEffect(() => {
     getPackage();
-    window.scrollTo(0, 0)
+    // window.scrollTo(0, 0)
   })
 
   let { slug } = useParams();
@@ -96,10 +97,11 @@ export default function PackageDetails() {
 
   return (
     <div>
-      <section className="inner-page-banner" id="home"> </section>
+
       { packageAPIData.packageDetails
         ?
         <div>
+          <BannerImg imgObj={packageAPIData.packageDetails.image} />
           <div className="breadcrumb-agile">
             <ol className="breadcrumb mb-0">
               <li className="breadcrumb-item">

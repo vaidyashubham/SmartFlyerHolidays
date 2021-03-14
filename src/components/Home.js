@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_home_packages.json';
 import { useEffect } from "react";
 import Services from './Services';
+import MailSubscription from './MailSubscription'
 // import Testimonials from './Testimonials';
 
 function Home() {
@@ -126,18 +127,19 @@ function Home() {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-5 d-flex subscribe-left p-lg-5 py-sm-5 py-4">
-							<div className="news-icon mr-3">
+							<div className="news-icon">
 								<span className="fa fa-paper-plane" aria-hidden="true"></span>
 							</div>
 							<div className="text">
-								<h3>Subscribe To Our Newsletter</h3>
+								<h3 className="text-center">Subscribe To Our Newsletter</h3>
 							</div>
 						</div>
 						<div className="col-md-7 subscribe-right p-lg-5 py-sm-5 py-4">
-							<form>
+							{/* <form>
 								<input type="email" name="email" placeholder="Enter your email here" required="" />
 								<button className="btn1"><span className="fa fa-paper-plane" aria-hidden="true"></span></button>
-							</form>
+							</form> */}
+							<MailSubscription />
 							<p>We never share your email with anyone else.</p>
 						</div>
 					</div>
