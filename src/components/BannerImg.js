@@ -12,7 +12,7 @@ function BannerImg({ imgObj }) {
 const InnerPageBanner = styled.section`
   background: url(${props => props.img}) no-repeat;
     background-size: cover;
-    min-height: 400px;
+    min-height: 550px;
     position: relative;
 `;
 

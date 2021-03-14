@@ -195,7 +195,7 @@ h2.agile-title {
 }
 
 .csslider>ul>li:first-child {
-    background: url(../images/home-bg.jpg) no-repeat center;
+    background: url(../images/bg_home.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -1161,13 +1161,13 @@ h4.leave-w3ls {
     margin-bottom: 2em;
 }
 
-.single-w3pvt-page img {
+/* .single-w3pvt-page img {
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -o- border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-}
+} */
 
 /* social icons */
 .w3ls_social_list li {
@@ -1335,7 +1335,7 @@ subscribe form {
 /* footer */
 
 .footer-content {
-    background: url(../images/footer_bg.jpg) center no-repeat;
+    background: url(../images/bg_footer.jpg) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2182,17 +2182,20 @@ textarea.input1+.shadow-input1 {
     z-index: 1;
 } */
 
-/* .welcome-grid:hover .hoverEffect {
-    transform: translate(-50%, -50%) scale(1);
-    transition: 0.6s ease-out;
-} */
 
-/* .welcome-grid:hover i,
+.welcome-grid:hover {
+    background: #f25c54;
+    /* transform: translate(-50%, -50%) scale(0); */
+    transition: 0.6s ease-out;
+}
+
+.welcome-grid:hover i,
 .welcome-grid:hover h4,
 .welcome-grid:hover p {
-    color: #fff;
+    
+    color: #fff !important;
     transition: 0.5s ease-out;
-} */
+}
 
 /* Package Details */
 
@@ -2468,37 +2471,37 @@ textarea.input1+.shadow-input1 {
     transition: border-bottom .5s ease-in-out;
 }
 
- /* for desktop */
- .whatsapp_float {
-     position: fixed;
-     width: 60px;
-     height: 60px;
-     bottom: 40px;
-     left: 40px;
-     background-color: #25d366;
-     color: #FFF;
-     border-radius: 50px;
-     text-align: center;
-     font-size: 30px;
-     box-shadow: 2px 2px 3px #999;
-     z-index: 100;
- }
+/* for desktop */
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
 
- .whatsapp-icon {
-     margin-top: 16px;
- }
+.whatsapp-icon {
+    margin-top: 16px;
+}
 
- /* for mobile */
- @media screen and (max-width: 767px) {
-     .whatsapp-icon {
-         margin-top: 10px;
-     }
+/* for mobile */
+@media screen and (max-width: 767px) {
+    .whatsapp-icon {
+        margin-top: 10px;
+    }
 
-     .whatsapp_float {
-         width: 40px;
-         height: 40px;
-         bottom: 45px;
-         right: 10px;
-         font-size: 22px;
-     }
- }
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 45px;
+        right: 10px;
+        font-size: 22px;
+    }
+}

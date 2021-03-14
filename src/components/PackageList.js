@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
+import BannerImg from './BannerImg';
 
 function PackageList() {
   useEffect(() => {
@@ -45,8 +46,9 @@ function PackageList() {
 
   return (
     <div>
-      <section className="inner-page-banner" id="home">
-      </section>
+      <BannerImg imgObj="assets/images/bg_packageList.jpg" />
+      {/* <section className="inner-page-banner" id="home">
+      </section> */}
       <Breadcrumb pageTitle="Packages" />
       <section className="banner-bottom py-5" id="exp">
         <div className="container py-md-5">

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ContactForm from './ContactForm';
 import Map from './Map';
 import Breadcrumb from './Breadcrumb'
+import BannerImg from './BannerImg';
 
 function Contact() {
 
@@ -11,8 +12,9 @@ function Contact() {
 
     return (
         <div>
-            <section className="inner-page-banner" id="home">
-            </section>
+            {/* <section className="inner-page-banner" id="home">
+            </section> */}
+            <BannerImg imgObj="assets/images/bg_contact.jpg" />
             <Breadcrumb pageTitle="Contact Us" />
             <section className="contact py-5 bg-li" id="contact">
                 <div className="container py-xl-5 py-lg-3">

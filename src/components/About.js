@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Breadcrumb from './Breadcrumb'
-// import bgImg from 'assets/images/bg.jpg';
-// import BannerImg from './BannerImg';
+import BannerImg from './BannerImg';
 
 function About() {
     useEffect(() => {
@@ -10,9 +9,9 @@ function About() {
 
     return (
         <div>
-            {/* <BannerImg imgObj="assets/images/bg.jpg" /> */}
-            <section className="inner-page-banner" id="home">
-            </section>
+            <BannerImg imgObj="assets/images/bg_about.jpg" />
+            {/* <section className="inner-page-banner" id="home">
+            </section> */}
             <Breadcrumb pageTitle="About Us" />
             <section className="banner-bottom py-5" id="exp">
                 <div className="container py-md-5">

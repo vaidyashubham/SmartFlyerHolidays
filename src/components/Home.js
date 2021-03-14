@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_home_packages.json';
 import { useEffect } from "react";
+import Services from './Services';
+// import Testimonials from './Testimonials';
 
 function Home() {
 	// const data = packagesInfo.splice(0, 3);
@@ -87,140 +89,13 @@ function Home() {
 				</div>
 			</section>
 
-			<section className="services py-5" id="services">
-				<div className="container py-md-5">
-					<h3 className="heading text-center mb-3 mb-sm-5">Our Services</h3>
-					<div className="">
+			<Services />
 
-						<div className="row welcome-bottom">
-							<div className="col-lg-4 col-sm-6 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-									<div className="hoverEffect"></div>
-
-									<i className="fa fa-briefcase"></i>
-									<h4 className="mt-4 mb-3 text-bl">Holiday Packages</h4>
-									<p>Book your holiday packages with us. We provides best holiday packages for Couples,
-                Family and Friends </p>
-								</div>
-							</div>
-							<div className="col-lg-4 col-sm-6 mt-sm-0 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-									<div className="hoverEffect"></div>
-
-									<i className="fa fa-plane"></i>
-									<h4 className="mt-4 mb-3 text-bl">Air Ticket</h4>
-									<p>We, offering the cheapest, most affordable domestic and international flight
-                ticket fares. .</p>
-								</div>
-							</div>
-							<div className="col-lg-4 col-sm-6 mt-lg-0 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-
-									<div className="hoverEffect"></div>
-									<i className="fa fa-hotel"></i>
-									<h4 className="mt-4 mb-3 text-bl">Hotels</h4>
-									<p>Top rated Hotel Accommodation with well suited environment will be included under our packages.</p>
-								</div>
-							</div>
-							<div className="col-lg-4 col-sm-6 mt-lg-0 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-
-									<div className="hoverEffect"></div>
-									<i className="fa fa-ship"></i>
-									<h4 className="mt-4 mb-3 text-bl">Passport/Visa Assistance</h4>
-									<p>We also provide passport and visa services to our clients on early basis.</p>
-								</div>
-							</div>
-							<div className="col-lg-4 col-sm-6 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-
-									<div className="hoverEffect"></div>
-									<i className="fa fa-car"></i>
-									<h4 className="mt-4 mb-3 text-bl">Car on Rent</h4>
-									<p>Travelling to a new city? Dont wory. We also offer anytime hassle free pick and drop to airport.</p>
-								</div>
-							</div>
-							<div className="col-lg-4 col-sm-6 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-
-									<div className="hoverEffect"></div>
-									<i className="fa fa-shopping-basket"></i>
-									<h4 className="mt-4 mb-3 text-bl">All other Travel services</h4>
-									<p>If you want any suggestion or services regarding your travel plan, we are always ready to
-                help.</p>
-								</div>
-							</div>
-						</div>
-
-						{/* <div className="col-md-6 ab-content ab-content1">
-								<div className="ab-content-inner">
-									<Link to="/single"><img src="assets/images/services2.jpg" alt="" className="img-fluid" /></Link>
-									<div className="ab-info-con">
-										<h4> Trim your Hair</h4>
-										<Link to="/single" className="read-more two btn m-0 px-3" role="button"><span className="fa fa-arrow-circle-o-right"> </span></Link>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-6 ab-content ab-content1">
-								<div className="ab-content-inner">
-									<Link to="/single"><img src="assets/images/services1.jpg" alt="" className="img-fluid" /></Link>
-									<div className="ab-info-con">
-										<h4>Trim your Beard</h4>
-										<a href="single.html" className="read-more two btn m-0 px-3"><span className="fa fa-arrow-circle-o-right"> </span></a>
-									</div>
-								</div>
-							</div> */}
-					</div>
-					{/* <div className="row ab-info second mt-lg-4">
-							<div className="col-md-3 ab-content">
-								<div className="ab-content-inner">
-									<Link to="/single"><img src="assets/images/ser3.jpg" alt="" className="img-fluid" /></Link>
-									<div className="ab-info-con">
-										<h4>colouring</h4>
-										<a href="single.html" className="read-more two btn m-0 px-3"><span className="fa fa-arrow-circle-o-right"> </span></a>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-3 ab-content">
-								<div className="ab-content-inner">
-									<Link to="/single"><img src="assets/images/ser4.jpg" alt="" className="img-fluid" /></Link>
-									<div className="ab-info-con">
-										<h4>Bathing</h4>
-										<a href="single.html" className="read-more two btn m-0 px-3"><span className="fa fa-arrow-circle-o-right"> </span></a>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-3 ab-content">
-								<div className="ab-content-inner">
-									<Link to="/single"><img src="assets/images/ser5.jpg" alt="" className="img-fluid" /></Link>
-									<div className="ab-info-con">
-										<h4>drying</h4>
-										<a href="single.html" className="read-more two btn m-0 px-3"><span className="fa fa-arrow-circle-o-right"> </span></a>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-3 ab-content">
-								<div className="ab-content-inner">
-									<Link to="/single"><img src="assets/images/ser6.jpg" alt="" className="img-fluid" /></Link>
-									<div className="ab-info-con">
-										<h4>Creams</h4>
-										<a href="single.html" className="read-more two btn m-0 px-3"><span className="fa fa-arrow-circle-o-right"> </span></a>
-									</div>
-								</div>
-
-
-							</div>
-						</div> */}
-				</div>
-			</section>
-			{/* // <!-- /services -->
- 
-	// <!-- pricing -->  */}
 			<section className="pricing py-5">
 				<div className="container py-md-5">
 					<h3 className="heading text-capitalize text-center mb-3 mb-sm-3"> Place Destination</h3>
 					<h3 className="tittle order text-center">
-						We organize customised holiday packages , both domestic and international
+						We organize customised holiday packages, both domestic and international
 							</h3>
 					<div className="row pricing-grids">
 						{packages}
@@ -245,59 +120,7 @@ function Home() {
 				</div>
 			</section>
 
-			<section className="testimonials py-5" id="testimonials">
-				<div className="container py-md-5">
-					<h3 className="heading text-center mb-3 mb-sm-5">Our Guests Love Us</h3>
-					<div className="row mt-3">
-
-						<div className="col-md-4 test-grid text-left px-lg-3 py-sm-5 py-md-0 py-3">
-							<div className="card p-3 test-info text-center morphism">
-								<p>It was a great experience visiting Assam n Meghalaya with Shreeji tours n travels. It was
-								perfectly planned tour,
-								customised as per requirement with good hospitality n care. I would recommend to plan ur tour with
-								shreeji tours n
-                  Travels. Full Paisa Vasool. Thank u Shreeji for making our trip memorable.</p>
-								<div className="test-img text-center">
-									<img src="assets/images/user2.png" className="img-fluid" alt="" width="70px" height="70px" />
-								</div>
-								<h3 className="mt-md-2 text-center">Heena Pahuja</h3>
-								<div className="mobl-footer test-soc text-center">
-								</div>
-							</div>
-						</div>
-						<div className="col-md-4 test-grid text-left px-lg-3 mb-3">
-							<div className="card p-3 text-center test-info morphism">
-								<p>We had great time traveling with SmartFlyer Holidays Pvt Ltd. I planned my first
-								ever international
-								trip to bali with shreeji. Its was fun and smooth. SmartFlyer Holidays Pvt Ltd were just one call away
-                  for anything. Thank you for making my trip a great experience.</p>
-								<div className="test-img text-center">
-									<img src="assets/images/user1.png" className="img-fluid" alt="" width="70px" height="70px" />
-								</div>
-								<h3 className="mt-md-2 text-center">Ankita Yewale</h3>
-								<div className="mobl-footer test-soc text-center">
-								</div>
-							</div>
-						</div>
-						<div className="col-md-4 test-grid text-left px-lg-3 mb-3">
-							<div className="card p-3 text-center test-info morphism">
-								<p>It was a great experience visiting Assam n Meghalaya with Shreeji tours n travels. It was
-								perfectly planned tour,
-								customised as per requirement with good hospitality n care. I would recommend to plan ur tour with
-								shreeji tours n
-                  Travels. Full Paisa Vasool. Thank u Shreeji for making our trip memorable</p>
-								<div className="test-img text-center">
-									<img src="assets/images/user2.png" className="img-fluid" alt="" width="70px" height="70px" />
-								</div>
-								<h3 className="mt-md-2 text-center">Nebula Nairobi</h3>
-								<div className="mobl-footer test-soc text-center">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
+			{/* <Testimonials /> */}
 
 			<section className="subscribe" id="subscribe">
 				<div className="container-fluid">
@@ -315,13 +138,13 @@ function Home() {
 								<input type="email" name="email" placeholder="Enter your email here" required="" />
 								<button className="btn1"><span className="fa fa-paper-plane" aria-hidden="true"></span></button>
 							</form>
-							<p>we never share your email with anyone else</p>
+							<p>We never share your email with anyone else.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-		</div>
+		</div >
 	)
 }
 

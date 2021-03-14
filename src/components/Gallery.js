@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Breadcrumb from './Breadcrumb';
+import BannerImg from './BannerImg';
 
 export default function Gallery() {
 
@@ -45,8 +46,9 @@ export default function Gallery() {
 
     return (
         <div>
-            <section className="inner-page-banner" id="home">
-            </section>
+            <BannerImg imgObj="assets/images/bg_gallery.jpg" />
+            {/* <section className="inner-page-banner" id="home">
+            </section> */}
             <Breadcrumb pageTitle="Gallery"/>
             <section className="gallery py-5" id="gallery">
                 <div className="container py-md-5">
