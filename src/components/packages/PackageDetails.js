@@ -12,7 +12,6 @@ export default function PackageDetails() {
 
   useEffect(() => {
     getPackage();
-    // window.scrollTo(0, 0)
   })
 
   let { slug } = useParams();
@@ -24,7 +23,7 @@ export default function PackageDetails() {
     setPackageAPIData(results[0]);
   }
 
-  console.log(packageAPIData.packageDetails);
+  // console.log(packageAPIData.packageDetails);
   let inclusionItems;
   let packageImages;
   // let iternaryIncluded;
@@ -97,99 +96,99 @@ export default function PackageDetails() {
 
   return (
     <div>
-
-      { packageAPIData.packageDetails
-        ?
-        <div>
-          <BannerImg imgObj={packageAPIData.packageDetails.image} />
-          <div className="breadcrumb-agile">
-            <ol className="breadcrumb mb-0">
-              <li className="breadcrumb-item">
-                <Link to='/'>Home</Link>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page"><Link to='/package-list'>Packages</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">{packageAPIData.packageDetails.title}</li>
-            </ol>
-          </div>
-          <section className="what-we-do py-5">
-            <div className="container py-md-5">
-              <h3 className="heading text-center mb-3 mb-sm-5">{packageAPIData.packageDetails.title}</h3>
-              <div className="package-wrapper py-5">
-                <div className="row">
-                  <div className="">
-                    <div className="nav-tab">
-                      <ul>
-                        <li><a href="#package-detail">Details</a></li>
-                        <li><a href="#package-itinerary">Itinerary</a></li>
-                        <li><a href="#package-images"> Photos</a></li>
-                      </ul>
-                    </div>
-                    <div className="package-content">
-                      <div className="package-detail theme-card" id="package-detail">
-                        <div className="package-title">
-                          <h3>
-                            <span className="packageName"> {`${packageAPIData.packageDetails.title} Package Details`}</span>
-                          </h3>
-                        </div>
-                        <p className="">
-                          <b>Destinations & Night Stays ( Kindly refer to the below itinerary for details. )</b>
-                          <br />
+      {
+        packageAPIData.packageDetails
+          ?
+          <div>
+            <BannerImg imgObj={packageAPIData.packageDetails.image} />
+            <div className="breadcrumb-agile">
+              <ol className="breadcrumb mb-0">
+                <li className="breadcrumb-item">
+                  <Link to='/'>Home</Link>
+                </li>
+                <li className="breadcrumb-item active" aria-current="page"><Link to='/package-list'>Packages</Link></li>
+                <li className="breadcrumb-item active" aria-current="page">{packageAPIData.packageDetails.title}</li>
+              </ol>
+            </div>
+            <section className="what-we-do py-5">
+              <div className="container py-md-5">
+                <h3 className="heading text-center mb-3 mb-sm-5">{packageAPIData.packageDetails.title}</h3>
+                <div className="package-wrapper py-5">
+                  <div className="row">
+                    <div className="">
+                      <div className="nav-tab">
+                        <ul>
+                          <li><a href="#package-detail">Details</a></li>
+                          <li><a href="#package-itinerary">Itinerary</a></li>
+                          <li><a href="#package-images"> Photos</a></li>
+                        </ul>
+                      </div>
+                      <div className="package-content">
+                        <div className="package-detail theme-card" id="package-detail">
+                          <div className="package-title">
+                            <h3>
+                              <span className="packageName"> {`${packageAPIData.packageDetails.title} Package Details`}</span>
+                            </h3>
+                          </div>
+                          <p className="">
+                            <b>Destinations & Night Stays ( Kindly refer to the below itinerary for details. )</b>
+                            <br />
                       Arrival At : {packageAPIData.packageDetails.arrivalAt}
-                          <br />
-                          {packageAPIData.packageDetails.stay1}
-                          <br />
-                          {packageAPIData.packageDetails.stay2}
-                          <br />
+                            <br />
+                            {packageAPIData.packageDetails.stay1}
+                            <br />
+                            {packageAPIData.packageDetails.stay2}
+                            <br />
                   Departure From: {packageAPIData.packageDetails.departureFrom}
-                          <br />
+                            <br />
                   Package Duration: {packageAPIData.packageDetails.packageDuration}
-                          <br />
+                            <br />
                   Inclusion:
                     </p>
-                        <div className="package-duration">
-                        </div>
-                        <div className="amenity-section">
-                          <div className="row">
-                            {inclusionItems}
+                          <div className="package-duration">
                           </div>
+                          <div className="amenity-section">
+                            <div className="row">
+                              {inclusionItems}
+                            </div>
+                          </div>
+                          <p className="description"><br /><b>₹ 11300/Person*</b></p>
                         </div>
-                        <p className="description"><br /><b>₹ 11300/Person*</b></p>
-                      </div>
-                      <div className="package-itinerary theme-card" id="package-itinerary">
-                        <div className="package-title">
-                          <h3>Itinerary</h3>
+                        <div className="package-itinerary theme-card" id="package-itinerary">
+                          <div className="package-title">
+                            <h3>Itinerary</h3>
+                          </div>
+                          {iternaryData}
                         </div>
-                        {iternaryData}
-                      </div>
-                      <div className="note">
-                        <p>Flight, Package, and Hotels Fares are subject to availability.</p>
-                      </div>
-                      <div className="package-images theme-card" id="package-images">
-                        <div className="package-title">
-                          <h3>Photos</h3>
+                        <div className="note">
+                          <p>Flight, Package, and Hotels Fares are subject to availability.</p>
                         </div>
-                        <div className="img-wrapper">
-                          {packageImages}
+                        <div className="package-images theme-card" id="package-images">
+                          <div className="package-title">
+                            <h3>Photos</h3>
+                          </div>
+                          <div className="img-wrapper">
+                            {packageImages}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </div>
-        :
-        <Loader
-          type="ThreeDots"
-          color="#f25c54"
-          height={100}
-          width={100}
-          className="text-center py-3"
-          timeout={3000} //3 secs
-        />
+            </section>
+          </div>
+          :
+          <Loader
+            type="ThreeDots"
+            color="#f25c54"
+            height={100}
+            width={100}
+            className="text-center py-3"
+            timeout={3000} //3 secs
+          />
       }
-    </div>
+    </div >
   )
 }
 

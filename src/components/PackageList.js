@@ -15,7 +15,7 @@ function PackageList() {
   async function getPackage() {
     const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     setPackageAPIData(data);
   }
 
