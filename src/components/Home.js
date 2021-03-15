@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_home_packages.json';
 import { useEffect } from "react";
 import Services from './Services';
-import MailSubscription from './MailSubscription'
+// import MailSubscription from './MailSubscription'
 // import Testimonials from './Testimonials';
 
 function Home() {
@@ -83,7 +83,6 @@ function Home() {
 						<div className="title-desc text-center px-lg-5">
 							<img src={require('../logo.png')} alt="" className="img-fluid" />
 							<p className="px-lg-5">At SmartFlyer Holidays Pvt Ltd, we offer our customers Theca-appointment of through travel schedules inside a 24 hour turnaround time. Our group of very talented staff have been prepared to comprehend customer needs and over the best choice accessible. We discount and retail our bundles and this give us the front line as far as offering our customers in the most aggressive costs. Innovation has empower us to arguments the utilisation of most recent reservations framework to give prompt input to our customers wherever conceivable. We have partners with reputable tour operators in various destination for the best rates for group and individual tour packages.</p>
-
 							<Link to="/about" className="btn mt-lg-4 mt-3 read scroll text-white" role="button">Learn More</Link>
 						</div>
 					</div>
@@ -123,7 +122,7 @@ function Home() {
 
 			{/* <Testimonials /> */}
 
-			<section className="subscribe" id="subscribe">
+			{/* <section className="subscribe" id="subscribe">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-5 d-flex subscribe-left p-lg-5 py-sm-5 py-4">
@@ -135,16 +134,12 @@ function Home() {
 							</div>
 						</div>
 						<div className="col-md-7 subscribe-right p-lg-5 py-sm-5 py-4">
-							{/* <form>
-								<input type="email" name="email" placeholder="Enter your email here" required="" />
-								<button className="btn1"><span className="fa fa-paper-plane" aria-hidden="true"></span></button>
-							</form> */}
 							<MailSubscription />
 							<p>We never share your email with anyone else.</p>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 		</div >
 	)

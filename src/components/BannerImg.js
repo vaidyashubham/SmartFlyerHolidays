@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 function BannerImg({ imgObj }) {
-  console.log(imgObj)
+  // console.log(imgObj)
   return (
     <InnerPageBanner img={imgObj}>
     </InnerPageBanner>
