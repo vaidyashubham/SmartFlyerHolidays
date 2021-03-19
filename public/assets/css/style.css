@@ -1385,7 +1385,7 @@ h4.footer-title {
 
 .footer p a {
     color: #fff;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .last-w3ls-contact p {
@@ -1403,7 +1403,7 @@ h4.footer-title {
 }
 
 .last-w3ls-contact p a:hover {
-    color: #15b915;
+    color: #f25c54;
 }
 
 .list-info-w3pvt li a {
@@ -1438,7 +1438,7 @@ h3.w3pvt_title {
 }
 
 .w3ls-icons li a span:hover {
-    color: #ffc80a;
+    color: #f25c54;
 }
 
 /* //footer */

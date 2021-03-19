@@ -35,7 +35,12 @@ class Footer extends Component {
                                         <p>
                                             <i
                                                 className="fa fa-envelope"></i>
-                                            <a href="mailto:shreejitours05@gmail.com"> shreejitours05@gmail.com</a>
+                                            <a href="mailto:booking@smartflyer.co.in"> booking@smartflyer.co.in</a>
+                                        </p>
+                                        <p>
+                                            <i
+                                                className="fa fa-envelope"></i>
+                                            <a href="mailto:support@smartflyer.co.in"> support@smartflyer.co.in</a>
                                         </p>
                                     </div>
                                     <div className="last-w3ls-contact my-2">
@@ -60,7 +65,7 @@ class Footer extends Component {
                                 </div>
                             </div>
                         </div>
-                        <p className="copy-right-grids text-li text-center my-sm-4 my-4">© 2019 SmartFlyer | All Rights Reserved 
+                        <p className="copy-right-grids text-li text-center my-sm-4 my-4">© 2019 SmartFlyer | All Rights Reserved
                         {/* | Design & Developed by <br />
                             <a href="https://shubhamvaidya.netlify.app/"> Shubham Vaidya </a> */}
                         </p>
@@ -78,14 +83,14 @@ class Footer extends Component {
                                 </li>
                                 <li>
                                     <a href="/#">
-                                        <span className="fa fa-dribbble"></span>
+                                        <span className="fa fa-instagram"></span>
                                     </a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="/#">
                                         <span className="fa fa-vk"></span>
                                     </a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         {/* <div className="move-top text-right"><Link to="/" className="move-top"> <span className="fa fa-angle-up  mb-3" aria-hidden="true"></span></Link></div> */}
