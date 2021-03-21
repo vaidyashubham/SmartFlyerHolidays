@@ -6,6 +6,7 @@ function ContactFormNetlify() {
   const [fieldErrors, setFieldErrors] = useState({});
   // Input Change Handling
   const [inputs, setInputs] = useState({
+    name: "",
     email: "",
     message: ""
   });
@@ -51,12 +52,28 @@ function ContactFormNetlify() {
       className="contact1-form validate-form"
       name="contact-form v1"
       method="POST"
-      data-netlify="true"      
+      data-netlify="true"
+      action="/form-submission-successful"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact-form v1" />
       <span className="contact1-form-title">
         Get in touch
         </span>
+      <div className="wrap-input1 validate-input">
+        <input
+          className="input1"
+          id="name"
+          type="text"
+          name="name"
+          onChange={handleOnChange}
+          value={inputs.name}
+          placeholder="Name"
+          required
+        />
+        {renderFieldError("email")}
+        <span className="shadow-input1"></span>
+      </div>
       <div className="wrap-input1 validate-input">
         <input
           className="input1"
@@ -66,6 +83,7 @@ function ContactFormNetlify() {
           onChange={handleOnChange}
           value={inputs.email}
           placeholder="Email"
+          required
         />
         {renderFieldError("email")}
         <span className="shadow-input1"></span>
@@ -78,12 +96,11 @@ function ContactFormNetlify() {
           placeholder="Message"
           onChange={handleOnChange}
           value={inputs.message}
-        // className={fieldErrors.message ? "error" : ""}
+          required
         ></textarea>
         {renderFieldError("message")}
         <span className="shadow-input1"></span>
       </div>
-
 
       <div className="container-contact1-form-btn">
         <button className="contact1-form-btn" type="submit">

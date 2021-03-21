@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import BannerImg from './BannerImg'
 
 function PageNotFound() {
   return (
     <div>
-      <section className="inner-page-banner" id="home">
-      </section>
+      <BannerImg imgObj="assets/images/bg_contact.jpg" />
       <div className="container py-md-5">
         <h3 className="heading text-center mb-3 mb-sm-5">Oops! 404 Not Found</h3>
         <h5 className="text-center">
