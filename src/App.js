@@ -25,7 +25,7 @@ function App() {
           <Route exact path='/package-list' component={PackageList} />
           <Route path='/package-list/:slug' component={PackageDetails} />
           <Route path='/contact' component={Contact} />
-          <Route path='/form-submission-successful' component={FormSuccess} />
+          <Route path='/form-submission-successful/' component={FormSuccess} />
           <Route path="*" component={PageNotFound} />
         </Switch>
         <ScrollToTop smooth color="#f25c54" />
