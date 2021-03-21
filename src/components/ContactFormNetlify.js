@@ -50,10 +50,8 @@ function ContactFormNetlify() {
     <form
       className="contact1-form validate-form"
       name="contact-form v1"
-      method="post"
-      data-netlify="true"
-      onSubmit="submit"
-      noValidate
+      method="POST"
+      data-netlify="true"      
     >
       <input type="hidden" name="form-name" value="contact-form v1" />
       <span className="contact1-form-title">
