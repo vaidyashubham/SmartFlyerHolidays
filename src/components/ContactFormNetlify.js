@@ -46,14 +46,15 @@ function ContactFormNetlify() {
       [event.target.id]: event.target.value
     }));
   };
-
+  // console.log(inputs)
   return (
+    
     <form
       className="contact1-form validate-form"
       name="contact-form v1"
       method="POST"
       data-netlify="true"
-      action="/form-submission-successful/"
+      action="/form-submission-successful"
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact-form v1" />

@@ -7,7 +7,7 @@ function FormSuccess() {
     <div>
       <BannerImg imgObj="assets/images/bg_contact.jpg" />
       <div className="container py-md-5">
-        <h3 className="heading text-center mb-3 mb-sm-5">Form Submitted Successfully</h3>
+        <h3 className="heading text-center mb-3 mb-sm-5">Form Submitted Successfully!</h3>
         <h5 className="text-center">
           Our support team will get back to you soon!
         </h5>
