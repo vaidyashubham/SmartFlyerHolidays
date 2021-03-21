@@ -51,14 +51,14 @@ function ContactFormNetlify() {
 
     <form
       className="contact1-form validate-form"
-      name="contact-form v1"
-      method="POST"
+      name="smartflyer-contact"
+      method="post"
       data-netlify="true"
-      action="/form-submission-successful/"
+      action="/form-submission-successful"
       data-netlify-honeypot="bot-field"
       onSubmit="submit"
     >
-      <input type="hidden" name="form-name" value="contact-form v1" />
+      <input type="hidden" name="form-name" value="smartflyer-contact" />
       <span className="contact1-form-title">
         Get in touch
         </span>
