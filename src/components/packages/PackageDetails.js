@@ -96,11 +96,12 @@ export default function PackageDetails() {
 
   return (
     <div>
+      <BannerImg imgObj={packageAPIData.packageDetails && packageAPIData.packageDetails.image} />
       {
         packageAPIData.packageDetails
           ?
           <div>
-            <BannerImg imgObj={packageAPIData.packageDetails.image} />
+
             <div className="breadcrumb-agile">
               <ol className="breadcrumb mb-0">
                 <li className="breadcrumb-item">

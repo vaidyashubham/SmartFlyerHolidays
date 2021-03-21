@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
 import BannerImg from './BannerImg';
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function PackageList() {
   useEffect(() => {
@@ -49,15 +51,30 @@ function PackageList() {
       <BannerImg imgObj="assets/images/bg_packageList.jpg" />
       {/* <section className="inner-page-banner" id="home">
       </section> */}
-      <Breadcrumb pageTitle="Packages" />
-      <section className="banner-bottom py-5" id="exp">
-        <div className="container py-md-5">
-          <h3 className="heading text-center mb-3 mb-sm-5">Our Packages</h3>
-          <div className="row pricing-grids">
-            {packages}
+      {
+        packageAPIData.length
+          ?
+          <div>
+            <Breadcrumb pageTitle="Packages" />
+            <section className="banner-bottom py-5" id="exp">
+              <div className="container py-md-5">
+                <h3 className="heading text-center mb-3 mb-sm-5">Our Packages</h3>
+                <div className="row pricing-grids">
+                  {packages}
+                </div>
+              </div>
+            </section>
           </div>
-        </div>
-      </section>
+          :
+          <Loader
+            type="ThreeDots"
+            color="#f25c54"
+            height={100}
+            width={100}
+            className="text-center py-3"
+            timeout={3000} //3 secs
+          />
+      }
     </div>
   )
 }

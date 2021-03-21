@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Breadcrumb from './Breadcrumb';
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import BannerImg from './BannerImg';
 
 export default function Gallery() {
@@ -47,31 +49,47 @@ export default function Gallery() {
     return (
         <div>
             <BannerImg imgObj="assets/images/bg_gallery.jpg" />
-            {/* <section className="inner-page-banner" id="home">
+            {
+                galleryImgData.length
+                    ?
+                    <div>
+                        
+                        {/* <section className="inner-page-banner" id="home">
             </section> */}
-            <Breadcrumb pageTitle="Gallery"/>
-            <section className="gallery py-5" id="gallery">
-                <div className="container py-md-5">
-                    <h3 className="heading text-center mb-3 mb-sm-5">Our Gallery</h3>
-                    <div className="gallery-content">
-                        <div className="row">
-                            {galleryImgages}
-                            {/* <div className="col-md-4 col-sm-6 gal-img">
+                        <Breadcrumb pageTitle="Gallery" />
+                        <section className="gallery py-5" id="gallery">
+                            <div className="container py-md-5">
+                                <h3 className="heading text-center mb-3 mb-sm-5">Our Gallery</h3>
+                                <div className="gallery-content">
+                                    <div className="row">
+                                        {galleryImgages}
+                                        {/* <div className="col-md-4 col-sm-6 gal-img">
                                 <a href="#gal1"><img src="assets/images/gallery_01.jpg" alt="aegis" className="img-fluid-1 mt-4" /></a>
                             </div>*/}
-                        </div>
-                        <div>
-                            {/* {galleryImgagesPopUp} */}
-                            {/* <div id="gal1" className="popup-effect">
+                                    </div>
+                                    <div>
+                                        {/* {galleryImgagesPopUp} */}
+                                        {/* <div id="gal1" className="popup-effect">
                                 <div className="popup">
                                     <img src="assets/images/gallery_01.jpg" alt="" className="img-fluid mt-4" />
                                     <a className="close" href="#gallery">&times;</a>
                                 </div>
                             </div> */}
-                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                </div>
-            </section>
+                    :
+                    <Loader
+                        type="ThreeDots"
+                        color="#f25c54"
+                        height={100}
+                        width={100}
+                        className="text-center py-3"
+                        timeout={3000} //3 secs
+                    />
+            }
         </div>
     )
 }
