@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ContactForm from './ContactForm';
+import ContactForm from './ContactFormNetlify';
 import Map from './Map';
 import Breadcrumb from './Breadcrumb'
 import BannerImg from './BannerImg';
