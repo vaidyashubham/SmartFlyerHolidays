@@ -72,7 +72,8 @@ function ContactForm() {
     setServerState({ submitting: true });
     axios({
       method: "POST",
-      url: "https://formspree.io/f/xbjpnaye",
+      // url: "https://formspree.io/f/xbjpnaye",
+      url: "https://formspree.io/f/mjvjbkow",  // Godaddy email
       data: inputs
     })
       .then(r => {
