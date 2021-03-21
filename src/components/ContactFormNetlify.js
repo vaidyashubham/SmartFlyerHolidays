@@ -54,7 +54,7 @@ function ContactFormNetlify() {
       name="smartflyer-contact"
       method="post"
       data-netlify="true"
-      action="/form-submission-successful"
+      action="/form-submission-successful/"
       data-netlify-honeypot="bot-field"
       onSubmit="submit"
     >
