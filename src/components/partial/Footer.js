@@ -65,7 +65,7 @@ class Footer extends Component {
                                 </div>
                             </div>
                         </div>
-                        <p className="copy-right-grids text-li text-center my-sm-4 my-4">© 2019 SmartFlyer | All Rights Reserved
+                        <p className="copy-right-grids text-li text-center my-sm-4 my-4">© 2021 SmartFlyer | All Rights Reserved
                         {/* | Design & Developed by <br />
                             <a href="https://shubhamvaidya.netlify.app/"> Shubham Vaidya </a> */}
                         </p>
