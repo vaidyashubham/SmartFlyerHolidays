@@ -9,19 +9,27 @@ export default function Gallery() {
     const [galleryImgData, setGalleryImgData] = useState([]);
 
     useEffect(() => {
-        getGalleryImg();
+        // getGalleryImg();
+        fetch("https://mysterious-wildwood-48575.herokuapp.com/galleries")
+            .then(res => res.json())
+            .then(
+                // photos => console.log(photos[0].photos);
+                photos => setGalleryImgData(photos[0].photos)
+            )
     }, [])
 
-    async function getGalleryImg() {
-        try {
-            const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/galleries`);
-            const data = await response.json();
-            // console.log(data[0].photos);
-            setGalleryImgData(data[0].photos);
-        } catch (err) {
-            console.log(err);
-        }
-    }
+    // console.log(galleryImgData)
+
+    // async function getGalleryImg() {
+    //     try {
+    //         const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/galleries`);
+    //         const data = await response.json();
+    //         // console.log(data[0].photos);
+    //         setGalleryImgData(data[0].photos);
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
 
     const galleryImgages = galleryImgData.map(img => {
         // console.log(img);
@@ -53,7 +61,7 @@ export default function Gallery() {
                 galleryImgData.length
                     ?
                     <div>
-                        
+
                         {/* <section className="inner-page-banner" id="home">
             </section> */}
                         <Breadcrumb pageTitle="Gallery" />
