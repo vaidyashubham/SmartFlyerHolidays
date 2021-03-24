@@ -6,7 +6,6 @@ function Testimonials() {
       <div className="container py-md-5">
         <h3 className="heading text-center mb-3 mb-sm-5">Our Guests Love Us</h3>
         <div className="row mt-3">
-
           <div className="col-md-4 test-grid text-left px-lg-3 py-sm-5 py-md-0 py-3">
             <div className="card p-3 test-info text-center morphism">
               <p>It was a great experience visiting Assam n Meghalaya with Shreeji tours n travels. It was

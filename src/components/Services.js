@@ -49,15 +49,6 @@ function Services() {
                 <p>Travelling to a new city? Dont wory. We also offer anytime hassle free pick and drop to airport.</p>
               </div>
             </div>
-            {/* <div className="col-lg-4 col-sm-6 px-2 mb-3">
-								<div className="welcome-grid text-center py-5 px-4 morphism">
-									<div className="hoverEffect"></div>
-									<i className="fa fa-shopping-basket"></i>
-									<h4 className="mt-4 mb-3 text-bl">All other Travel services</h4>
-									<p>If you want any suggestion or services regarding your travel plan, we are always ready to
-                help.</p>
-								</div>
-							</div> */}
           </div>
         </div>
       </div>

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import packagesInfo from './packages/_home_packages.json';
 import { useEffect } from "react";
 import Services from './Services';
-// import MailSubscription from './MailSubscription'
-// import Testimonials from './Testimonials';
 
 function Home() {
 	// const data = packagesInfo.splice(0, 3);
@@ -27,8 +25,6 @@ function Home() {
 							</div>
 							<div className="stats mt-2">
 								<div className="d-flex justify-content-between p-price text-dark"><span>Package Duration</span><span>{packageData.packageDuration}</span></div>
-								{/* <div className="d-flex justify-content-between p-price"><span>Pattaya, Thailand</span><span>3 Nights</span></div>
-                  <div className="d-flex justify-content-between p-price"><span>Bangkok, Thailand</span><span>2 Nights</span></div> */}
 							</div>
 							<div className="d-flex justify-content-between total font-weight-bold mt-1 text-dark"><span>Starting at only</span><span>{packageData.total}</span>
 							</div>
@@ -59,13 +55,10 @@ function Home() {
 							</div>
 						</li>
 						<li>
-
 						</li>
 						<li>
-
 						</li>
 						<li>
-
 						</li>
 					</ul>
 					<div className="navigation">
@@ -110,7 +103,7 @@ function Home() {
 				<div className="container py-md-5">
 					<div className="test-info text-center">
 						<h3 className="tittle order">
-							<span>CALL US TO BOOK An APPOINTMENT</span>Our team will call back immediately and Book the Appointment</h3>
+							<span>CALL US TO BOOK AN APPOINTMENT</span>Our team will call back immediately and Book the Appointment</h3>
 						<h4 className="tittle my-2"> +91 9595016858</h4>
 
 						<div className="read-more mx-auto m-0 text-center">
@@ -119,28 +112,6 @@ function Home() {
 					</div>
 				</div>
 			</section>
-
-			{/* <Testimonials /> */}
-
-			{/* <section className="subscribe" id="subscribe">
-				<div className="container-fluid">
-					<div className="row">
-						<div className="col-md-5 d-flex subscribe-left p-lg-5 py-sm-5 py-4">
-							<div className="news-icon">
-								<span className="fa fa-paper-plane" aria-hidden="true"></span>
-							</div>
-							<div className="text">
-								<h3 className="text-center">Subscribe To Our Newsletter</h3>
-							</div>
-						</div>
-						<div className="col-md-7 subscribe-right p-lg-5 py-sm-5 py-4">
-							<MailSubscription />
-							<p>We never share your email with anyone else.</p>
-						</div>
-					</div>
-				</div>
-			</section> */}
-
 		</div >
 	)
 }

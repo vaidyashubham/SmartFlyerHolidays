@@ -77,15 +77,15 @@ ul {
 
 /*-- header --*/
 
-a.navbar-brand {
-    /* font-size: .75em;
+/* a.navbar-brand {
+    font-size: .75em;
     color: #f25c54;
     padding: 0;
     font-weight: 600;
     margin: 0;
     letter-spacing: 1px;
-    position: relative; */
-}
+    position: relative;
+} */
 
 /*-- //header --*/
 
@@ -2169,20 +2169,6 @@ textarea.input1+.shadow-input1 {
     border-radius: 50%;
 }
 
-/* .hoverEffect {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    background: #f25c54;
-    transition: 0.6s ease-out;
-    z-index: 1;
-} */
-
-
 .welcome-grid:hover {
     background: #f25c54;
     /* transform: translate(-50%, -50%) scale(0); */
@@ -2300,9 +2286,9 @@ textarea.input1+.shadow-input1 {
     font-weight: bold;
 }
 
-.amenity-section {
-    /* margin-top: 40px; */
-}
+/* .amenity-section {
+    margin-top: 40px;
+} */
 
 .amenity {
     padding: 20px 10px;
