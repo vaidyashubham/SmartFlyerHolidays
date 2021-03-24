@@ -16,7 +16,8 @@ export default function Gallery() {
                 // photos => console.log(photos[0].photos);
                 photos => setGalleryImgData(photos[0].photos)
             )
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [galleryImgData])
 
     // console.log(galleryImgData)
 
@@ -95,7 +96,7 @@ export default function Gallery() {
                         height={100}
                         width={100}
                         className="text-center py-3"
-                        timeout={3000} //3 secs
+                        timeout={5000} //3 secs
                     />
             }
         </div>

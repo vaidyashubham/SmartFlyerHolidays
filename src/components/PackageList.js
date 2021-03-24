@@ -72,7 +72,7 @@ function PackageList() {
             height={100}
             width={100}
             className="text-center py-3"
-            timeout={3000} //3 secs
+            timeout={5000} //3 secs
           />
       }
     </div>

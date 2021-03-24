@@ -35,6 +35,7 @@ function ContactFormNetlify() {
     if (Object.keys(fieldErrors).length > 0) {
       validate();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputs]);
   /* End new validation ^^^^ */
 
