@@ -17,7 +17,7 @@ export default function Gallery() {
                 photos => setGalleryImgData(photos[0].photos)
             )
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [galleryImgData])
+    }, [])
 
     // console.log(galleryImgData)
 
@@ -44,16 +44,7 @@ export default function Gallery() {
         )
     })
 
-    // const galleryImgagesPopUp = galleryImgData.map(img => {
-    //     return (
-    //         <div id={`#${img.id}`} className="popup-effect" key={img.id}>
-    //             <div className="popup">
-    //                 <img src={`http://localhost:1337${img.url}`} alt="" className="img-fluid mt-4" />
-    //                 <a className="close" href="#gallery">&times;</a>
-    //             </div>
-    //         </div>
-    //     )
-    // })
+  
 
     return (
         <div>
