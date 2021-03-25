@@ -9,7 +9,7 @@ class Navbar extends Component {
 					<div className="header d-lg-flex justify-content-between align-items-center">
 						<div className="header-agile">
 							<h1>
-								<Link to='/' className="navbar-brand logo">
+								<Link to='/' aria-label="Brand-logo" className="navbar-brand logo">
 									<img src={require('../../logo.png')} alt="" className="logo" />
 								</Link>
 							</h1>

@@ -7,6 +7,7 @@ function Whatsapp() {
       className="whatsapp_float"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Whatsapp"
     >
       <i className="fa fa-whatsapp whatsapp-icon"></i>
     </a >

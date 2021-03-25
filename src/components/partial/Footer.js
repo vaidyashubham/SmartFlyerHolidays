@@ -72,17 +72,17 @@ class Footer extends Component {
                         <div className="w3ls-footer text-center mt-4">
                             <ul className="list-unstyled w3ls-icons">
                                 <li>
-                                    <a href="/#">
+                                    <a href="/#" aria-label="Facebook">
                                         <span className="fa fa-facebook-f"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/#">
+                                    <a href="/#" aria-label="Twitter">
                                         <span className="fa fa-twitter"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/#">
+                                    <a href="/#" aria-label="Instagram">
                                         <span className="fa fa-instagram"></span>
                                     </a>
                                 </li>

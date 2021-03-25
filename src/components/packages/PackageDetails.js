@@ -12,7 +12,7 @@ export default function PackageDetails() {
 
   useEffect(() => {
     getPackage();
-  })
+  },[])
 
   let { slug } = useParams();
 
@@ -34,31 +34,24 @@ export default function PackageDetails() {
 
     inclusionItems = inclusion && inclusion.map(item => {
       return (
-        <div>
-          <span className="badge">{item}</span>
+        <div key={item}>
+          <span className="badge" >{item}</span>
         </div>
       )
     })
 
     packageImages = photos && photos.map(item => {
       return (
-        <div>
+        <div key={item}>
           <img src={item} alt="" />
         </div>
       )
     })
 
-    // iternaryIncluded = iternary && iternary.map(item => {
-    //   return (
-    //     item.included.map(item => {
-    //       return <span className="badge badge-primary">{item}</span>
-    //     })
-    //   )
-    // })
-
     iternaryData = iternary && iternary.map(item => {
+      // console.log(item)
       return (
-        <div className="each-day">
+        <div className="each-day" key={item.dayNo}>
           <div className="day-title">
             <div className="row">
               <div className="col-md-3 col-12">
@@ -83,7 +76,7 @@ export default function PackageDetails() {
                 <p>{item.description}</p>
                 {
                   item.included.map(item => {
-                    return <span className="badge badge-primary">{item}</span>
+                    return <span className="badge badge-primary" key={item}>{item}</span>
                   })
                 }
               </div>

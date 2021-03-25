@@ -28,7 +28,7 @@ function App() {
           <Route path='/form-submission-successful/' component={FormSuccess} />
           <Route path="*" component={PageNotFound} />
         </Switch>
-        <ScrollToTop smooth color="#f25c54" />
+        <ScrollToTop aria-label="Scroll to top" smooth color="#f25c54" />
         <Whatsapp/>
         <Footer />
       </Router>

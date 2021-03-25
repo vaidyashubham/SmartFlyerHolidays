@@ -19,19 +19,6 @@ export default function Gallery() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // console.log(galleryImgData)
-
-    // async function getGalleryImg() {
-    //     try {
-    //         const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/galleries`);
-    //         const data = await response.json();
-    //         // console.log(data[0].photos);
-    //         setGalleryImgData(data[0].photos);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
-
     const galleryImgages = galleryImgData.map(img => {
         // console.log(img);
         return (
@@ -44,8 +31,6 @@ export default function Gallery() {
         )
     })
 
-  
-
     return (
         <div>
             <BannerImg imgObj="assets/images/bg_gallery.jpg" />
@@ -53,9 +38,6 @@ export default function Gallery() {
                 galleryImgData.length
                     ?
                     <div>
-
-                        {/* <section className="inner-page-banner" id="home">
-            </section> */}
                         <Breadcrumb pageTitle="Gallery" />
                         <section className="gallery py-5" id="gallery">
                             <div className="container py-md-5">
@@ -63,18 +45,8 @@ export default function Gallery() {
                                 <div className="gallery-content">
                                     <div className="row">
                                         {galleryImgages}
-                                        {/* <div className="col-md-4 col-sm-6 gal-img">
-                                <a href="#gal1"><img src="assets/images/gallery_01.jpg" alt="aegis" className="img-fluid-1 mt-4" /></a>
-                            </div>*/}
                                     </div>
                                     <div>
-                                        {/* {galleryImgagesPopUp} */}
-                                        {/* <div id="gal1" className="popup-effect">
-                                <div className="popup">
-                                    <img src="assets/images/gallery_01.jpg" alt="" className="img-fluid mt-4" />
-                                    <a className="close" href="#gallery">&times;</a>
-                                </div>
-                            </div> */}
                                     </div>
                                 </div>
                             </div>
