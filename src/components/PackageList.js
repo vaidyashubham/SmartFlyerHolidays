@@ -26,9 +26,11 @@ export default class PackageList extends Component {
           })
         }
       )
+    window.scrollTo(0, 0);
   }
 
   render() {
+
     // console.log(this.state.packageAPIData)
     return (
       <div>
