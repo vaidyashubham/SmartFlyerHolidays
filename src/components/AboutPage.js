@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Breadcrumb from './Breadcrumb'
 import BannerImg from './BannerImg';
 
-function About() {
+function AboutPage() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -15,11 +15,11 @@ function About() {
                 <div className="container py-md-5">
                     <h3 className="heading text-center mb-3 mb-sm-5">About Us</h3>
                     <div className="row mid-grids mt-lg-5 mt-3">
-                        <div className="col-md-5 content-w3pvt-img">
+                        <div className="col-md-5 content-w3pvt-img d-flex">
                             <img src="assets/images/about1.jpg" alt="" className="img-fluid" />
                         </div>
                         <div className="col-md-7 content-left-bottom entry-w3ls-info text-left">   
-                            <h4>TO TRAVEL IS TO LIVE</h4>
+                            <h4 className="text-center pt-2">TO TRAVEL IS TO LIVE</h4>
                             <p className="mt-2 text-left">As I took stock of what has transpired over the years, I am extremely proud of our achievements since 2017. The future looks even more promising, promising, with plans for growth fully underway.we have successfully transitioned from a local Nagpur based one branch operation to become a respected company garnering business from across the nation whilst earning our clients trust and respect. Six simple words- “to be our customer’s only choice”- sums up our entire mission. We have resolved to providing our clients extraordinary level of customer service.</p>
                         </div>
                     </div>
@@ -38,4 +38,4 @@ function About() {
     )
 }
 
-export default About
+export default AboutPage

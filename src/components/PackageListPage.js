@@ -6,13 +6,15 @@ import BannerImg from './BannerImg';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-function PackageList() {
+function PackageListPage() {
+  const [packageAPIData, setPackageAPIData] = useState([]);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     getPackage();
   }, [])
 
-  const [packageAPIData, setPackageAPIData] = useState([]);
+  
 
   async function getPackage() {
     const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
@@ -49,8 +51,6 @@ function PackageList() {
   return (
     <div>
       <BannerImg imgObj="assets/images/bg_packageList.jpg" />
-      {/* <section className="inner-page-banner" id="home">
-      </section> */}
       {
         packageAPIData.length
           ?
@@ -79,4 +79,4 @@ function PackageList() {
   )
 }
 
-export default PackageList
+export default PackageListPage

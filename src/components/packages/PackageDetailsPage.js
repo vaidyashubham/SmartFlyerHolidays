@@ -6,7 +6,7 @@ import Loader from "react-loader-spinner";
 import BannerImg from '../BannerImg';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-export default function PackageDetails() {
+export default function PackageDetailsPage() {
 
   const [packageAPIData, setPackageAPIData] = useState([]);
 

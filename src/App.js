@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
+import HomePage from './components/HomePage';
 import Navbar from './components/partial/Navbar';
 import Footer from './components/partial/Footer';
-import About from './components/About';
-import Gallery from './components/Gallery';
-import Contact from './components/Contact';
-import PackageList from './components/PackageList';
-import PackageDetails from './components/packages/PackageDetails';
+import AboutPage from './components/AboutPage';
+import GalleryPage from './components/GalleryPage';
+import ContactPage from './components/ContactPage';
+import PackageListPage from './components/PackageListPage';
+import PackageDetailsPage from './components/packages/PackageDetailsPage';
 import PageNotFound from './components/PageNotFound';
 import ScrollToTop from "react-scroll-to-top";
 import Whatsapp from './components/Whatsapp';
@@ -19,12 +19,12 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/gallery' component={Gallery} />
-          <Route exact path='/package-list' component={PackageList} />
-          <Route path='/package-list/:slug' component={PackageDetails} />
-          <Route path='/contact' component={Contact} />
+          <Route exact path='/' component={HomePage} />
+          <Route path='/about' component={AboutPage} />
+          <Route path='/gallery' component={GalleryPage} />
+          <Route exact path='/package-list' component={PackageListPage} />
+          <Route path='/package-list/:slug' component={PackageDetailsPage} />
+          <Route path='/contact' component={ContactPage} />
           <Route path='/form-submission-successful/' component={FormSuccess} />
           <Route path="*" component={PageNotFound} />
         </Switch>

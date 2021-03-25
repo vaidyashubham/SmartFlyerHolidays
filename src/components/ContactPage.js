@@ -4,7 +4,7 @@ import Map from './Map';
 import Breadcrumb from './Breadcrumb'
 import BannerImg from './BannerImg';
 
-function Contact() {
+function ContactPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -33,4 +33,4 @@ function Contact() {
     )
 
 }
-export default Contact
+export default ContactPage
