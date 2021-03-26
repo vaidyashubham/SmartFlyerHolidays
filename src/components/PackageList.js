@@ -5,6 +5,8 @@ import Breadcrumb from './Breadcrumb';
 import BannerImg from './BannerImg';
 import Loader from "react-loader-spinner";
 import firebase from "../firebase.js";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default class PackageList extends Component {
@@ -57,7 +59,15 @@ export default class PackageList extends Component {
                             <Link to={`/package-list/${packageData.slug}`}>
                               <div className="d-flex justify-content-center container mt-5">
                                 <div className="card p-3 bg-white morphism">
-                                  <div className="about-product text-center mt-2"><img src={packageData.image} alt="" width="300" height="250" />
+                                  <div className="about-product text-center mt-2">
+                                    <LazyLoadImage
+                                      effect="blur"
+                                      src={packageData.image}
+                                      // className="img-fluid"
+                                      width="300"
+                                      height="250"
+                                    />
+                                    {/* <img src={packageData.image} alt="" width="300" height="250" /> */}
                                     <div>
                                       <h4 className="pt-1">{packageData.title}</h4>
                                     </div>

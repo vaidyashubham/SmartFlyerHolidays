@@ -7,11 +7,14 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import BannerImg from './BannerImg';
 import firebase from "../firebase.js";
 
+
+
 export default class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: []
+      images: [],
+      isLoading: true
     }
   }
   componentDidMount() {
@@ -28,12 +31,10 @@ export default class Gallery extends Component {
     //     }
     //   )
 
-
     var storageRef = firebase.storage().ref("images");
     let temp = [];
     storageRef.listAll().then(function (result) {
       let path = storageRef.fullPath
-
       path = path.replace(/\b\/\b(?!.*?\b\/\b)/, "%2F");
       result.items.forEach(fileRef => {
         temp.push({
@@ -50,7 +51,14 @@ export default class Gallery extends Component {
     })
   }
 
+  onLoad = () => {
+    // delay for demo only
+    setTimeout(() => {
+      this.setState({ isLoading: false })
+    }, 1000);
 
+    // setIsLoading(false)
+  }
 
   render() {
     // console.log(this.state.images)
@@ -72,7 +80,27 @@ export default class Gallery extends Component {
                           return (
                             <div className="col-md-4 col-sm-6 gal-img" key={img.name}>
                               <a href={`#${img.name}`} >
-                                <img src={`https://firebasestorage.googleapis.com/v0/b/smartflyer-3537e.appspot.com/o/${img.url}&token=72cde219-3290-4ad9-8c81-56d65c822d75`} alt="aegis" className="img-fluid-1 mt-4" />
+                                {/* <LazyLoadImage
+                                  effect="blur"
+                                  src={`https://firebasestorage.googleapis.com/v0/b/smartflyer-3537e.appspot.com/o/${img.url}&token=72cde219-3290-4ad9-8c81-56d65c822d75`}
+                                  className="img-fluid-1 mt-4"
+                                /> */}
+
+                                {/* <img src={`https://firebasestorage.googleapis.com/v0/b/smartflyer-3537e.appspot.com/o/${img.url}&token=72cde219-3290-4ad9-8c81-56d65c822d75`} alt="aegis" className="img-fluid-1 mt-4" /> */}
+
+                                <img
+                                  alt=""
+                                  className="img-fluid-1 mt-4 morphism"
+                                  src="https://flevix.com/wp-content/uploads/2019/07/Comp-2.gif"
+                                  style={{ display: this.state.isLoading ? "block" : "none" }}
+                                />
+                                <img
+                                  src={`https://firebasestorage.googleapis.com/v0/b/smartflyer-3537e.appspot.com/o/${img.url}&token=72cde219-3290-4ad9-8c81-56d65c822d75`}
+                                  alt=""
+                                  className="img-fluid-1 mt-4"
+                                  style={{ display: this.state.isLoading ? "none" : "block" }}
+                                  onLoad={this.onLoad}
+                                />
                               </a>
                             </div>
 

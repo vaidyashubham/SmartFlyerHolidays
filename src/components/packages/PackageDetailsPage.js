@@ -6,6 +6,8 @@ import Loader from "react-loader-spinner";
 import BannerImg from '../BannerImg';
 import firebase from "../../firebase.js";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function PackageDetailsPage() {
 
@@ -20,7 +22,7 @@ export default function PackageDetailsPage() {
       setPackageAPIData(results[0]);
     });
     window.scrollTo(0, 0);
-  },[])
+  }, [])
 
   let { slug } = useParams();
 
@@ -51,7 +53,7 @@ export default function PackageDetailsPage() {
     packageImages = photos && photos.map(item => {
       return (
         <div key={item}>
-          <img src={item} alt="" />
+         <img src={item} alt="" />
         </div>
       )
     })
@@ -76,7 +78,12 @@ export default function PackageDetailsPage() {
           <div className="row">
             <div className="col-md-3">
               <div className="day-img-wrapper">
-                <img src={item.img} width="100%" alt="" />
+                <LazyLoadImage
+                  effect="blur"
+                  src={item.img}
+                  width="100%"
+                />
+                {/* <img src={item.img} width="100%" alt="" /> */}
               </div>
             </div>
             <div className="col-md-9">
