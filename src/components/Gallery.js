@@ -5,38 +5,60 @@ import Breadcrumb from './Breadcrumb';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import BannerImg from './BannerImg';
+import firebase from "../firebase.js";
 
 export default class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: []
+      images: []
     }
   }
   componentDidMount() {
     // send HTTP request
     // save it to the state
-    fetch("https://mysterious-wildwood-48575.herokuapp.com/galleries")
-      .then(res => res.json())
-      .then(
-        response => {
-          // console.log(response[0].photos)
-          this.setState({
-            photos: response[0].photos
-          })
-        }
-      )
+    // fetch("https://mysterious-wildwood-48575.herokuapp.com/galleries")
+    //   .then(res => res.json())
+    //   .then(
+    //     response => {
+    //       // console.log(response[0].photos)
+    //       this.setState({
+    //         photos: response[0].photos
+    //       })
+    //     }
+    //   )
+
+
+    var storageRef = firebase.storage().ref("images");
+    let temp = [];
+    storageRef.listAll().then(function (result) {
+      let path = storageRef.fullPath
+
+      path = path.replace(/\b\/\b(?!.*?\b\/\b)/, "%2F");
+      result.items.forEach(fileRef => {
+        temp.push({
+          name: fileRef.name,
+          url: path + "%2F" + fileRef.name + "?alt=media"
+        })
+      });
+    }).then(() => {
+      this.setState({
+        images: temp
+      })
+    }).catch(error => {
+      console.log(error);
+    })
   }
 
-  
+
 
   render() {
-    // console.log(this.state.photos)
+    // console.log(this.state.images)
     return (
       <div>
         <BannerImg imgObj="assets/images/bg_gallery.jpg" />
         {
-          this.state.photos.length
+          this.state.images.length
             ?
             <div>
               <Breadcrumb pageTitle="Gallery" />
@@ -46,11 +68,11 @@ export default class Gallery extends Component {
                   <div className="gallery-content">
                     <div className="row">
                       {
-                        this.state.photos.map(img => {
+                        this.state.images.map(img => {
                           return (
-                            <div className="col-md-4 col-sm-6 gal-img" key={img.id}>
-                              <a href={`#${img.id}`} >
-                                <img src={`${img.url}`} alt="aegis" className="img-fluid-1 mt-4" />
+                            <div className="col-md-4 col-sm-6 gal-img" key={img.name}>
+                              <a href={`#${img.name}`} >
+                                <img src={`https://firebasestorage.googleapis.com/v0/b/smartflyer-3537e.appspot.com/o/${img.url}&token=72cde219-3290-4ad9-8c81-56d65c822d75`} alt="aegis" className="img-fluid-1 mt-4" />
                               </a>
                             </div>
 

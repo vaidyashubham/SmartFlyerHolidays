@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Loader from "react-loader-spinner";
 import BannerImg from '../BannerImg';
+import firebase from "../../firebase.js";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function PackageDetailsPage() {
@@ -11,26 +12,33 @@ export default function PackageDetailsPage() {
   const [packageAPIData, setPackageAPIData] = useState([]);
 
   useEffect(() => {
-    getPackage();
+    // getPackage();
+    const itemsRef = firebase.database().ref('package');
+    itemsRef.on('value', (snapshot) => {
+      let items = snapshot.val();
+      let results = items.filter(function (entry) { return entry.slug === slug; });
+      setPackageAPIData(results[0]);
+    });
+    window.scrollTo(0, 0);
   },[])
 
   let { slug } = useParams();
 
-  async function getPackage() {
-    const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
-    const data = await response.json();
-    var results = data.filter(function (entry) { return entry.packageDetails.slug === slug; });
-    setPackageAPIData(results[0]);
-  }
+  // async function getPackage() {
+  //   const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
+  //   const data = await response.json();
+  //   var results = data.filter(function (entry) { return entry.packageDetails.slug === slug; });
+  //   setPackageAPIData(results[0]);
+  // }
 
-  // console.log(packageAPIData.packageDetails);
+  // console.log(packageAPIData);
   let inclusionItems;
   let packageImages;
   // let iternaryIncluded;
   let iternaryData;
 
-  if (packageAPIData.packageDetails) {
-    const { iternary, inclusion, photos } = packageAPIData.packageDetails;
+  if (packageAPIData) {
+    const { iternary, inclusion, photos } = packageAPIData;
 
     inclusionItems = inclusion && inclusion.map(item => {
       return (
@@ -75,7 +83,7 @@ export default function PackageDetailsPage() {
               <div className="day-detail">
                 <p>{item.description}</p>
                 {
-                  item.included.map(item => {
+                  item.included && item.included.map(item => {
                     return <span className="badge badge-primary" key={item}>{item}</span>
                   })
                 }
@@ -89,9 +97,9 @@ export default function PackageDetailsPage() {
 
   return (
     <div>
-      <BannerImg imgObj={packageAPIData.packageDetails && packageAPIData.packageDetails.image} />
+      <BannerImg imgObj={packageAPIData && packageAPIData.image} />
       {
-        packageAPIData.packageDetails
+        packageAPIData
           ?
           <div>
 
@@ -101,12 +109,12 @@ export default function PackageDetailsPage() {
                   <Link to='/'>Home</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page"><Link to='/package-list'>Packages</Link></li>
-                <li className="breadcrumb-item active" aria-current="page">{packageAPIData.packageDetails.title}</li>
+                <li className="breadcrumb-item active" aria-current="page">{packageAPIData.title}</li>
               </ol>
             </div>
             <section className="what-we-do py-5">
               <div className="container py-md-5">
-                <h3 className="heading text-center mb-3 mb-sm-5">{packageAPIData.packageDetails.title}</h3>
+                <h3 className="heading text-center mb-3 mb-sm-5">{packageAPIData.title}</h3>
                 <div className="package-wrapper py-5">
                   <div className="row">
                     <div className="">
@@ -121,21 +129,21 @@ export default function PackageDetailsPage() {
                         <div className="package-detail theme-card" id="package-detail">
                           <div className="package-title">
                             <h3>
-                              <span className="packageName"> {`${packageAPIData.packageDetails.title} Package Details`}</span>
+                              <span className="packageName"> {`${packageAPIData.title} Package Details`}</span>
                             </h3>
                           </div>
                           <p className="">
                             <b>Destinations & Night Stays ( Kindly refer to the below itinerary for details. )</b>
                             <br />
-                      Arrival At : {packageAPIData.packageDetails.arrivalAt}
+                      Arrival At : {packageAPIData.arrivalAt}
                             <br />
-                            {packageAPIData.packageDetails.stay1}
+                            {packageAPIData.stay1}
                             <br />
-                            {packageAPIData.packageDetails.stay2}
+                            {packageAPIData.stay2}
                             <br />
-                  Departure From: {packageAPIData.packageDetails.departureFrom}
+                  Departure From: {packageAPIData.departureFrom}
                             <br />
-                  Package Duration: {packageAPIData.packageDetails.packageDuration}
+                  Package Duration: {packageAPIData.packageDuration}
                             <br />
                   Inclusion:
                     </p>
