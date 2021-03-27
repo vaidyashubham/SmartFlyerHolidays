@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import Breadcrumb from './Breadcrumb'
 import BannerImg from './BannerImg';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function AboutPage() {
     useEffect(() => {
@@ -18,12 +16,7 @@ function AboutPage() {
                     <h3 className="heading text-center mb-3 mb-sm-5">About Us</h3>
                     <div className="row mid-grids mt-lg-5 mt-3">
                         <div className="col-md-5 content-w3pvt-img d-flex">
-                            <LazyLoadImage
-                                effect="blur"
-                                src={"assets/images/about1.jpg"}
-                                className="img-fluid"
-                            />
-                            {/* <img src="assets/images/about1.jpg" alt="" className="img-fluid" /> */}
+                            <img src="assets/images/about1.jpg" alt="" className="img-fluid" />
                         </div>
                         <div className="col-md-7 content-left-bottom entry-w3ls-info text-left">
                             <h4 className="text-center pt-2">TO TRAVEL IS TO LIVE</h4>
@@ -35,12 +28,7 @@ function AboutPage() {
                             <p className="mt-2 text-left">In short, we’ve given all our hallmark by which we measure our performance, and we hold ourselves, as do our clients, to the highest standard of quality. The SmartFlyer Holidays Pvt Ltd is committed to providing unparalleled service to our customers. To achieve this, one mission remains “to build successful and rewarding relationship with all of our valued customer”. We are committed to fundamental principal that the customer is not only important, but the reason for our business, and everyone at SmartFlyer Holidays Pvt Ltd genuinely work to earn and keep much-valued client trust.</p>
                         </div>
                         <div className="col-md-5 content-w3pvt-img mt-lg-0 mt-3">
-                            <LazyLoadImage
-                                effect="blur"
-                                src={"assets/images/about2.jpg"}
-                                className="img-fluid"
-                            />
-                            {/* <img src="assets/images/about2.jpg" alt="" className="img-fluid" /> */}
+                            <img src="assets/images/about2.jpg" alt="" className="img-fluid" />
                         </div>
                     </div>
                 </div>
