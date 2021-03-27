@@ -2131,6 +2131,7 @@ textarea.input1+.shadow-input1 {
 .morphism {
     border-radius: 6px;
     box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 20%);
+    background: #fff;
 }
 
 .welcome-grid {
