@@ -22,7 +22,7 @@ export default function PackageDetailsPage() {
       setPackageAPIData(results[0]);
     });
     window.scrollTo(0, 0);
-  }, [])
+  }, [slug])
 
   let { slug } = useParams();
 
