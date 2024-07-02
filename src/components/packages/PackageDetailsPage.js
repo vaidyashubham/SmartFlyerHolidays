@@ -13,6 +13,8 @@ export default function PackageDetailsPage() {
 
   const [packageAPIData, setPackageAPIData] = useState([]);
 
+  let { slug } = useParams();
+  
   useEffect(() => {
     // getPackage();
     const itemsRef = firebase.database().ref('package');
@@ -23,8 +25,6 @@ export default function PackageDetailsPage() {
     });
     window.scrollTo(0, 0);
   }, [slug])
-
-  let { slug } = useParams();
 
   // async function getPackage() {
   //   const response = await fetch(`https://mysterious-wildwood-48575.herokuapp.com/packages`);
